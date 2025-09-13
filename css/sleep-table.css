@@ -1,0 +1,10 @@
+/* Simple responsive table to show a sample "Sleep Health Snapshot" */
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px dashed #00000040; text-align: center; padding: 0.5rem; background-color: #FAFEFF; }
+th { background-color: #0a5878; color: white; }
+.invisible { border: none; background: transparent; }
+.sleep-metrics-table { background-color: #0a5878; border-top: 0.3rem solid #224;
+  border-bottom: 0.3rem solid #224; padding: 0 0 0.5rem; }
+
+@media (max-width: 900px) { th, td { padding: 0.35rem; font-size: 0.85rem; } }
+@media (max-width: 600px) { th, td { padding: 0.25rem; font-size: 0.75rem; } }

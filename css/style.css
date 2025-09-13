@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* === GENERAL RESET === */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  background: #f7fbfd;
+  color: #263238;
+}
+
+/* === HEADER / NAV === */
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* PRIMARY NAV – centered */
+nav#primary-navbar {
+  padding: 8px;
+  background: #0a5878;
+  color: #fff;
+  display: flex;
+  justify-content: center;  /* centers the UL block */
+  align-items: center;
+}
+
+/* SECONDARY NAV – centered */
+nav#secondary-navbar {
+  padding: 6px;
+  background: #6e98ad;
+  color: #fff;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Shared list layout for both nav bars */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;           /* lay items in a row */
+  align-items: center;
+  gap: 24px;               /* even spacing between items */
+}
+
+/* Items */
+nav ul li {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Links */
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a:hover { color: #ffe082; }
+nav a:focus-visible {
+  outline: 2px solid #ffe082;
+  outline-offset: 2px;
+}
+.active-navbar { color: #ffe082; }
+
+/* Logo inside first nav item */
+.logo {
+  width: 40px;
+  height: auto;
+  vertical-align: middle;
+  display: block;
+}
+
+/* === MAIN LAYOUT === */
+main { flex: 1; width: 100%; }
+section { max-width: 1100px; }
+.content { width: 82%; margin: 0 auto; padding: 22px; }
+
+section p { margin: 16px 0; }
+section li { list-style: "• "; margin: 12px 18px; }
+
+#contact { text-align: center; }
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 4px;
+}
+
+.bold-italic-text { font-weight: 700; font-style: italic; }
+.hero-photo { width: 100%; border-radius: 10px; }
+
+.disclaimer {
+  font-size: 0.9rem;
+  color: #546e7a;
+  border-left: 3px solid #b0bec5;
+  padding-left: 10px;
+}
+
+/* === BANNER / IMAGES === */
+.full-width-image { width: 100%; height: auto; display: block; }
+
+/* === FOOTER === */
+footer {
+  font-size: 0.8rem;
+  background: #0a5878;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  position: sticky;
+  bottom: 0;
+  z-index: 1000;
+}
+footer a { color: #ffe082; }
+footer a:hover { color: #fff1b3; }
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  nav ul { gap: 18px; }
+}
+
+@media (max-width: 768px){
+  body { font-size: 0.95rem; }
+  .content { width: 94%; }
+  .logo { width: 34px; }
+}
+
+@media (max-width: 520px) {
+  nav ul { gap: 14px; }
+  h1 { font-size: 1.5rem; }
+}

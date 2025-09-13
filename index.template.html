@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Reusable <head> gets inlined by components/head.html;
+         keeping minimal tags here so the page loads even if JS fails. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nordic Sleep Clinic</title>
+    <script src="/js/script.js" defer></script>
+    <script src="/js/components.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <div id="primary-navbar"></div>
+      <div id="secondary-navbar"></div>
+    </header>
+
+    <div id="banner"></div>
+
+    <main>
+      <section class="content" id="about">
+        <!-- @@INJECT: md/introduction.md -->
+      </section>
+    </main>
+    </main>
+
+    <div class="sleep-metrics-table"></div>
+
+    <main>
+      <section class="content" id="services">
+        <!-- @@INJECT: md/services.md -->
+
+        <p>Book an introduction call below:</p>
+        <div id="calendly_embed"></div>
+      </section>
+
+      <section class="content" id="shop">
+        <h1>Shop</h1>
+        <p>Digital resources to support your care:</p>
+        <ul>
+          <li><span class="bold-italic-text">Sleep Diary Template:</span> printable & spreadsheet versions.</li>
+          <li><span class="bold-italic-text">CBT‑I Workbook:</span> exercises, sleep restriction calculator, and troubleshooting.</li>
+          <li><span class="bold-italic-text">Jet‑Lag Planner:</span> phased light/sleep schedule generator.</li>
+        </ul>
+        <a class="gumroad-button" href="https://yourstore.gumroad.com/l/sleep-diary">View Sleep Diary</a>
+      </section>
+
+      <section class="content" id="guides">
+        <h1>Guides</h1>
+        <p>Read our free articles and handouts <a href="/pages/guides.html">here</a>.</p>
+      </section>
+
+      <section class="content" id="contact">
+        <h1>Contact</h1>
+        <p>Email: <a href="mailto:hello@nordicsleepclinic.com">hello@nordicsleepclinic.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/nordicsleepclinic">@nordicsleepclinic</a></p>
+        <p>If you suspect a medical disorder (e.g., sleep apnea), please consult your physician. We can coordinate referrals.</p>
+      </section>
+    </main>
+
+    <script src="/js/sleep-metrics-table.js"></script>
+    <script src="/js/calendly.js"></script>
+
+    <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+    <script src="https://gumroad.com/js/gumroad.js"></script>
+
+    <footer id="footer"></footer>
+  </body>
+</html>
