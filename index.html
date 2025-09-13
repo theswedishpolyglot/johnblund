@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sömn-KBT som fungerar – Bedömning & behandling på 2–4 veckor</title>
+  <meta name="description" content="Evidensbaserad Sömn-KBT (insomni) av legitimerade psykologer. Bedömning, individanpassad behandling och uppföljning. Boka ett kort bedömningssamtal." />
+  <meta property="og:title" content="Sömn-KBT som fungerar" />
+  <meta property="og:description" content="Evidensbaserad behandling av insomni – ofta effekt på 2–4 veckor." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://YOUR-DOMAIN/ASSETS/og.png" />
+  <link rel="icon" href="assets/favicon.svg" />
+  <!-- Optional preview privacy: uncomment to avoid indexing pre-launch -->
+  <!-- <meta name="robots" content="noindex,nofollow" /> -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Soothing sleep palette
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#0f172a',
+            deep: '#1e293b',
+            sky: '#7aa2ff',
+            lilac: '#c7c5ff',
+            foam: '#f8fafc'
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(2, 6, 23, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>html{scroll-behavior:smooth}</style>
+</head>
+<body class="antialiased text-deep bg-foam">
+  <!-- Disclaimer Banner -->
+  <div class="fixed top-0 left-0 right-0 z-50 
+              bg-yellow-50 border-b border-yellow-200 
+              py-3 px-6 text-center text-sm text-yellow-800">
+    ⚠️ <strong>Observera:</strong> Denna webbplats är under utveckling. 
+    Inga tjänster erbjuds för tillfället. Informationen på sidan är endast 
+    preliminär och ska inte betraktas som vårderbjudande eller medicinsk rådgivning.
+  </div>
+
+  <!-- Spacer so header/content doesn't get hidden behind the fixed banner -->
+  <div class="h-12"></div>
+
+  <!-- Header -->
+  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <img src="assets/logo.svg" alt="John Blund" class="h-8 w-8" />
+      <span class="text-xl font-bold">John&nbsp;Blund Psykologer</span>
+    </a>
+    <nav class="hidden md:flex gap-6">
+      <a href="#metod" class="hover:opacity-80">Metod</a>
+      <a href="#priser" class="hover:opacity-80">Priser</a>
+      <a href="#faq" class="hover:opacity-80">Vanliga frågor</a>
+      <a href="#kontakt" class="hover:opacity-80">Kontakt</a>
+    </nav>
+    <a href="#boka" class="md:inline-block hidden rounded-xl px-4 py-2 bg-midnight text-white shadow-soft">Boka bedömning</a>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6">
+    <!-- Hero -->
+    <section class="py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-midnight">
+          Sömn-KBT som fungerar<br class="hidden md:block" />
+          <span class="bg-gradient-to-r from-sky to-lilac bg-clip-text text-transparent">resultat på 2–4 veckor</span>
+        </h1>
+        <p class="mt-5 text-lg text-slate-600">
+          Legitimerade psykologer med erfarenhet av att behandla insomni. Evidensbaserad behandling – utan onödiga mediciner.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a id="boka" href="#simplybook" class="rounded-xl px-5 py-3 bg-midnight text-white shadow-soft" onclick="openBooking(event)">Boka bedömningssamtal</a>
+          <a href="#metod" class="rounded-xl px-5 py-3 border">Så funkar det</a>
+        </div>
+        <p class="mt-3 text-xs text-slate-500">Digitalt eller på plats. Svar inom 24h.</p>
+      </div>
+      <img src="assets/hero.png" alt="Sömn-KBT – behandling mot insomni" class="w-full rounded-2xl shadow-soft" />
+    </section>
+
+    <!-- Value props -->
+    <section id="metod" class="py-12 grid md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl border bg-white">
+        <h3 class="font-semibold text-lg">Evidensbaserat</h3>
+        <p class="text-slate-600 mt-2">Rekommenderas av Socialstyrelsen vid insomni. Fokus på det som ger effekt.</p>
+      </div>
+      <div class="p-6 rounded-2xl border bg-white">
+        <h3 class="font-semibold text-lg">Personligt upplägg</h3>
+        <p class="text-slate-600 mt-2">Upplägget anpassas efter dina besvär och din vardag.</p>
+      </div>
+      <div class="p-6 rounded-2xl border bg-white">
+        <h3 class="font-semibold text-lg">Snabbt & tydligt</h3>
+        <p class="text-slate-600 mt-2">Många märker förbättring inom 2–4 veckor, med mätbara resultat.</p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-12">
+      <div class="rounded-3xl p-8 md:p-12 bg-gradient-to-br from-white to lilac/20 border">
+        <h2 class="text-2xl md:text-3xl font-bold text-midnight">Så går det till</h2>
+        <ol class="mt-6 grid md:grid-cols-3 gap-6">
+          <li class="bg-white rounded-2xl p-6 border shadow-soft">
+            <p class="text-sm font-medium text-slate-500">Steg 1</p>
+            <h3 class="font-semibold mt-1">Kort bedömningssamtal</h3>
+            <p class="text-slate-600 mt-2">Vi kartlägger din sömn och utesluter sådant som först behöver behandlas.</p>
+          </li>
+          <li class="bg-white rounded-2xl p-6 border shadow-soft">
+            <p class="text-sm font-medium text-slate-500">Steg 2</p>
+            <h3 class="font-semibold mt-1">Behandlingsplan</h3>
+            <p class="text-slate-600 mt-2">Tydligt upplägg med verktyg som passar din situation.</p>
+          </li>
+          <li class="bg-white rounded-2xl p-6 border shadow-soft">
+            <p class="text-sm font-medium text-slate-500">Steg 3</p>
+            <h3 class="font-semibold mt-1">Uppföljning & resultat</h3>
+            <p class="text-slate-600 mt-2">Vi följer upp, justerar och säkerställer varaktig effekt.</p>
+          </li>
+        </ol>
+        <div class="mt-8">
+          <a href="#simplybook" class="rounded-xl px-5 py-3 bg-midnight text-white shadow-soft" onclick="openBooking(event)">Boka bedömningssamtal</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="priser" class="py-12">
+      <h2 class="text-2xl font-bold text-midnight">Priser</h2>
+      <p class="text-slate-600 mt-2">Enkla och transparenta priser. Inga bindningstider.</p>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl border bg-white shadow-soft">
+          <h3 class="font-semibold text-lg">Bedömningssamtal</h3>
+          <p class="text-slate-600 mt-2">Ca 20–30 minuter. Vi avgör om Sömn-KBT är rätt för dig.</p>
+          <p class="mt-4 text-3xl font-extrabold">SEK&nbsp;—</p>
+          <p class="text-slate-500 text-sm mt-1">Fyll i ert pris här.</p>
+          <div class="mt-6">
+            <a href="#simplybook" class="rounded-xl px-5 py-3 border" onclick="openBooking(event)">Boka</a>
+          </div>
+        </div>
+        <div class="p-6 rounded-2xl border bg-white shadow-soft">
+          <h3 class="font-semibold text-lg">Behandling (2–4 veckor)</h3>
+          <p class="text-slate-600 mt-2">Individanpassad Sömn-KBT med tät uppföljning.</p>
+          <p class="mt-4 text-3xl font-extrabold">SEK&nbsp;—</p>
+          <p class="text-slate-500 text-sm mt-1">Sätt totalpris eller per session.</p>
+          <div class="mt-6">
+            <a href="#simplybook" class="rounded-xl px-5 py-3 bg-midnight text-white shadow-soft" onclick="openBooking(event)">Boka behandling</a>
+          </div>
+        </div>
+      </div>
+      <p class="text-xs text-slate-500 mt-4">Av- och ombokning enligt villkor. Fråga gärna om student-/introduktionspris.</p>
+    </section>
+
+    <!-- Våra sömnpsykologer -->
+    <section id="psykologer" class="py-16">
+      <h2 class="text-2xl md:text-3xl font-bold text-midnight text-center">Våra sömnpsykologer</h2>
+      <p class="text-slate-600 mt-3 text-center max-w-2xl mx-auto">
+        Vi är legitimerade psykologer som erbjuder evidensbaserad behandling för insomni. 
+        Välj den terapeut du vill boka direkt hos.
+      </p>
+
+      <div class="mt-10 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- William -->
+        <div class="p-6 rounded-2xl border bg-white shadow-soft flex flex-col items-center text-center">
+          <img src="assets/william.jpg" alt="William" class="w-32 h-32 rounded-full object-cover shadow-soft" />
+          <h3 class="mt-4 font-semibold text-lg">William Efternamn</h3>
+          <p class="text-slate-600">Leg. psykolog – Sömn-KBT</p>
+          <a href="https://WILLIAM-SIMPLYBOOK-LANK" 
+            class="mt-6 inline-block rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
+            Boka William
+          </a>
+          <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+            Leg. psykolog med erfarenhet av KBT-behandling för sömnproblem, stress och oro. 
+            Brinner för att hjälpa klienter återfå kontroll över sin sömn och vardag med konkreta verktyg.
+          </p>
+        </div>
+
+        <!-- Johan -->
+        <div class="p-6 rounded-2xl border bg-white shadow-soft flex flex-col items-center text-center">
+          <img src="assets/johan.jpg" alt="Johan" class="w-32 h-32 rounded-full object-cover shadow-soft" />
+          <h3 class="mt-4 font-semibold text-lg">Johan Bornold</h3>
+          <p class="text-slate-600">Leg. psykolog – Sömn-KBT</p>
+          <a href="https://JOHAN-SIMPLYBOOK-LANK" 
+            class="mt-6 inline-block rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
+            Boka Johan
+          </a>
+          <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+            Leg. psykolog med särskilt fokus på sömn och insomni. 
+            Har arbetat både kliniskt och med att utveckla behandlingsmanualer för Sömn-KBT, 
+            och vill göra effektiv behandling mer tillgänglig.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Varför välja oss & Sömn-KBT -->
+    <section id="varfor" class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-midnight">Varför välja oss och Sömn-KBT?</h2>
+        <p class="mt-4 text-slate-600 max-w-3xl mx-auto">
+          Vi är legitimerade psykologer som arbetar med <strong>Sömn-KBT</strong>, den metod som 
+          <strong>Socialstyrelsen rekommenderar som förstahandsval</strong> vid insomni. 
+          Behandlingen är vetenskapligt bevisad och ger oftast resultat inom 2–4 veckor.
+        </p>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-6 text-left">
+          <div class="p-6 rounded-2xl border bg-foam shadow-soft">
+            <h3 class="font-semibold text-lg text-midnight">Legitimerade psykologer</h3>
+            <p class="text-slate-600 mt-2">
+              Legitimation är en skyddad titel utfärdad av Socialstyrelsen. 
+              Det innebär att vi uppfyller höga krav på utbildning, erfarenhet 
+              och arbetar under tillsyn av IVO.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl border bg-foam shadow-soft">
+            <h3 class="font-semibold text-lg text-midnight">Evidensbaserad metod</h3>
+            <p class="text-slate-600 mt-2">
+              Sömn-KBT är <strong>väl beforskad</strong> och används internationellt som 
+              “gold standard” vid behandling av insomni. 
+              Den fokuserar på beteendeförändringar som verkligen gör skillnad.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl border bg-foam shadow-soft">
+            <h3 class="font-semibold text-lg text-midnight">Snabb effekt</h3>
+            <p class="text-slate-600 mt-2">
+              Forskning visar att <strong>70–80&nbsp;%</strong> märker tydlig förbättring 
+              inom 2–4 veckor. Effekten håller i sig, till skillnad från sömnmediciner 
+              som bara ger kortvarig lindring.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <a href="#boka" 
+            class="inline-block rounded-xl px-6 py-3 bg-midnight text-white shadow-soft">
+            Boka ett bedömningssamtal
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (expanded from your background docs) -->
+    <section id="faq" class="py-12">
+      <h2 class="text-2xl font-bold text-midnight">Vanliga frågor</h2>
+
+      <details class="mt-6 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Vad är insomni och hur vanligt är det?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Ungefär 10&nbsp;% av vuxna i Sverige uppfyller kriterier för insomni: svårigheter att somna, hålla sig sovande eller tidiga uppvaknanden minst tre nätter/vecka i tre månader – med påverkan på vardagen.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Hur snabbt märks effekt av Sömn-KBT?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Många märker tydlig förbättring inom 2–4 veckor. Behandlingen minskar insomningstid, nattliga uppvaknanden och förbättrar sömnkvalitet.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Fungerar Sömn-KBT även om jag har stress, ångest eller annan psykisk ohälsa?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Ja – huvudverktygen i Sömn-KBT riktar sig mot sömntryck och dygnsrytm, vilket gör att behandlingen ofta fungerar även när stress eller oro finns i bilden.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          När är Sömn-KBT mindre lämpligt eller behöver anpassas?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Vid <em>sömnapné</em>, <em>restless legs</em>, <em>kronisk smärta</em> eller <em>diabetes</em> behöver dessa tillstånd behandlas först. Kvarstående sömnproblem kan sedan adresseras med Sömn-KBT. Ett kort bedömningssamtal hjälper oss att avgöra vad som passar dig.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Undantag – vad gäller vid skiftarbete?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Vid skiftarbete har huvudverktygen begränsad effekt. Vi kan arbeta med alternativa strategier, exempelvis “anchor sleep” (återkommande kärnsömn varje dygn) och rutiner som passar dina pass.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Vad är sömnrestriktion – och hur lågt kan man gå?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Sömnrestriktion innebär att tiden i sängen anpassas till den faktiska sovtiden (genomsnitt) + ca 30 min. Det jämnar ut sömnen och höjer sömnkvaliteten.</p>
+          <p>Utgångspunkten är att inte lägga sig under ~6 timmar i sängen (5,5 h sömn + 30 min insomning/vakentid) i startläget. Tiden justeras därefter utifrån sömneffektivitet och hur du mår på dagen.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Vad är stimuluskontroll – måste jag lämna sängen?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Målet är att hjärnan ska förknippa sängen med sömn. Om du inte somnar inom kort, eller vaknar och inte somnar om, lämnar du sängen och gör något lugnt tills sömnighet kommer – då går du tillbaka.</p>
+          <p>För vissa sätter vi en “max-tid” utanför sängen (t.ex. 30 min) för att undvika överfokusering på signaler.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Behöver jag föra sömndagbok?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Ja. Sömndagboken är central för att beräkna din faktiska sovtid, följa mönster och utvärdera behandling. Den fylls i på morgonen och behöver inte vara på minuten exakt.</p>
+          <p>Det finns även appar (t.ex. “CBT-i Coach”, engelska) som kan hjälpa till att räkna ut genomsnitt automatiskt.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Hur är det med tupplurar?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Generellt undviks tupplurar under behandlingen eftersom de sänker sömntrycket. Undantag kan göras (t.ex. hos äldre) – då korta (<30 min) och helst före kl 15.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Skillnad mellan “trött” och “sömnig”?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p><strong>Sömnig</strong> = kroppen signalerar sömnbehov (gäspningar, tunga ögonlock, somnar lätt). <strong>Trött</strong> = allmän utmattning eller låg energi som kan bero på aktivitet, känslor eller oro – inte samma sak som sömnighet.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Ska jag använda eller trappa ut sömnmediciner?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Sömnmedel kan ge kortvarig effekt men löser sällan orsakerna till insomni. Sömn-KBT har mer varaktig effekt. Eventuell utsättning görs säkrast i dialog med förskrivande vårdgivare.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Hur många sessioner behövs?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Varierar – vissa behöver 3 möten, andra fler. Vi följer upp med sömndagbok och mått som Insomnia Severity Index (ISI) och anpassar tempo efter resultat.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Contact -->
+    <section id="kontakt" class="py-12">
+      <h2 class="text-2xl font-bold text-midnight">Kontakt</h2>
+      <p class="text-slate-600 mt-2">Har du frågor eller vill bli kontaktad? Skriv till oss så återkommer vi.</p>
+      <form action="https://formspree.io/f/YOUR-FORMSPREE-ID" method="POST" class="mt-6 grid md:grid-cols-2 gap-4">
+        <input class="border rounded-xl px-4 py-3" name="email" type="email" placeholder="du@example.com" required />
+        <input class="border rounded-xl px-4 py-3" name="name" placeholder="Ditt namn" />
+        <textarea class="border rounded-xl px-4 py-3 md:col-span-2" name="message" rows="4" placeholder="Hur kan vi hjälpa dig?"></textarea>
+        <button class="rounded-xl px-5 py-3 bg-midnight text-white w-max shadow-soft">Skicka</button>
+      </form>
+      <p class="text-xs text-slate-500 mt-3">Genom att skicka formuläret godkänner du att vi kontaktar dig via e-post.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-6xl mx-auto px-6 py-12 text-sm text-slate-500">
+    © <span id="y"></span> John Blund Psykologer • <a href="#" class="underline">Integritetspolicy</a>
+  </footer>
+
+  <!-- SimplyBook modal -->
+  <div id="booking-modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50" aria-hidden="true">
+    <div class="bg-white rounded-2xl w-full max-w-3xl h-[75vh] shadow-soft relative">
+      <button class="absolute right-3 top-3 rounded-lg px-3 py-1 border" onclick="closeBooking()">Stäng</button>
+      <iframe
+        id="simplybook"
+        title="Bokning"
+        class="w-full h-full rounded-2xl"
+        src="https://YOUR-SIMPLYBOOK-SUBDOMAIN.simplybook.it/v2/"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    function openBooking(e){
+      if(e) e.preventDefault();
+      document.getElementById('booking-modal').classList.remove('hidden');
+      document.getElementById('booking-modal').setAttribute('aria-hidden','false');
+    }
+    function closeBooking(){
+      document.getElementById('booking-modal').classList.add('hidden');
+      document.getElementById('booking-modal').setAttribute('aria-hidden','true');
+    }
+    // Close on overlay click or Esc
+    document.getElementById('booking-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'booking-modal') closeBooking();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeBooking();
+    });
+  </script>
+</body>
+</html>
