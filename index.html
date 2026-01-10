@@ -76,7 +76,7 @@
           Legitimerade psykologer som hjälper dig med dina sömnproblem. Baserad på forskning med god evidens.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a id="boka" href="#simplybook" class="rounded-xl px-5 py-3 bg-midnight text-white shadow-soft" onclick="openBooking(event)">Boka bedömningssamtal</a>
+          <a id="boka" href="#psykologer" class="rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">Boka bedömningssamtal</a>
           <a href="#varfor" class="rounded-xl px-5 py-3 border">Varför Sömn KBT?</a>
         </div>
         <p class="mt-3 text-xs text-slate-500">Digital behandling (videosamtal).</p>
@@ -175,7 +175,7 @@
           <div class="p-6 rounded-2xl border bg-foam shadow-soft">
             <h3 class="font-semibold text-lg text-midnight">Överdrivet mycket sömn</h3>
             <p class="text-slate-600 mt-2">
-              En känsla av att sova för länge eller vara överdrivet sömnig trots många timmars sömn.
+              Överdrivet mycket sömn (t. ex. 9-12 timmar) och sömnighet trots många timmars sömn.
             </p>
           </div>
 
@@ -196,7 +196,7 @@
           <div class="p-6 rounded-2xl border bg-foam shadow-soft">
             <h3 class="font-semibold text-lg text-midnight">Mardrömmar*</h3>
             <p class="text-slate-600 mt-2">
-              Återkommande och störande mardrömmar som påverkar insomning, trygghet eller sömnkvalitet.
+              KBT för mardrömmar som kan behandla både traumarelaterade och icke-traumarelaterade mardrömmar.
             </p>
           </div>
         </div>
@@ -281,50 +281,71 @@
 
 
     <!-- Pricing -->
-    <section id="priser" class="py-12">
+    <section id="priser" class="py-12" style="text-align: center;">
       <h2 class="text-2xl font-bold text-midnight">Priser</h2>
-      <p class="text-slate-600 mt-2"></p> 
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-2xl border bg-white shadow-soft">
-          <h3 class="font-semibold text-lg">Bedömningssamtal (första samtalet)</h3>
-          <p class="text-slate-600 mt-2">Cirka 30 minuter. Vi ställer frågor för att avgöra om Sömn-KBT är rätt för dig. Innan du bokar, vänligen säkerställ att följande stämmer in på dig:
-            <ul class="list-disc list-inside mt-2 ">
-              <li>Jag jobbar <strong>inte</strong> skift.</li>
-              <li>Jag har <strong>inte</strong> narkolepsi.</li>
-            </ul>
-          </p>
-          <p class="mt-4 text-3xl font-extrabold">SEK&nbsp;—</p>
-          <p class="text-slate-500 text-sm mt-1">Inkl. moms.</p>
-          <div class="mt-6">
-            <a href="#simplybook" class="rounded-xl px-5 py-3 border" onclick="openBooking(event)">Boka</a>
-          </div>
-        </div>
-        <div class="p-6 rounded-2xl border bg-white shadow-soft">
-          <h3 class="font-semibold text-lg">Behandling</h3>
-          <p class="text-slate-600 mt-2">Sömnbehandling (Sömn-KBT) anpassad till dina sömnproblem.</p>
-          <p class="mt-4 text-3xl font-extrabold">SEK&nbsp;—</p>
-          <p class="text-slate-500 text-sm mt-1">30-45 minuter per samtal.</p>
-          <div class="mt-6">
-            <a href="#simplybook" class="rounded-xl px-5 py-3 bg-midnight text-white shadow-soft" onclick="openBooking(event)">Boka behandling</a>
-          </div>
+
+      <div class="mt-6 p-6 rounded-2xl border bg-white shadow-soft max-w-xl mx-auto">
+        <table class="w-full text-left">
+          <thead class="text-sm text-slate-500">
+            <tr>
+              <th class="py-3 pr-4 font-medium">Samtalstyp</th>
+              <th class="py-3 pl-4 font-medium text-right">Pris</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y">
+            <tr>
+              <td class="py-4 pr-4 font-medium text-midnight">
+                Bedömningssamtal
+              </td>
+              <td class="py-4 pl-4 text-right font-semibold text-midnight">
+                500 kr
+              </td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-medium text-midnight">
+                Behandlingssamtal
+              </td>
+              <td class="py-4 pl-4 text-right font-semibold text-midnight">
+                900 kr
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="text-xs text-slate-500 mt-4">
+          Avbokning och ombokning enligt <a href="#villkor" class="underline">villkor</a>.
+        </p>
+
+        <div class="mt-6">
+          <a href="#psykologer" class="rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
+            Boka
+          </a>
         </div>
       </div>
-      <p class="text-xs text-slate-500 mt-4">Av- och ombokning enligt villkor.</p>
     </section>
+
 
     <!-- FAQ (expanded from your background docs) -->
     <section id="faq" class="py-12">
       <h2 class="text-2xl font-bold text-midnight">Vanliga frågor</h2>
 
-      <details class="mt-6 rounded-2xl border bg-white p-6 group open:shadow-soft">
-        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
-          Vad är insomni och hur vanligt är det?
-          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
-        </summary>
-        <div class="mt-4 space-y-4 text-slate-700">
-          <p>Ungefär 10&nbsp;% av vuxna i Sverige uppfyller kriterier för insomni: svårigheter att somna, hålla sig sovande eller tidiga uppvaknanden minst tre nätter/vecka i tre månader – med påverkan på vardagen.</p>
-        </div>
-      </details>
+    <details class="mt-6 rounded-2xl border bg-white p-6 group open:shadow-soft">
+      <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+        Vad innebär sömnsvårigheter eller sömnproblem?
+        <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+      </summary>
+      <div class="mt-4 space-y-4 text-slate-700">
+        <p>Sömnsvårigheter är ett brett begrepp och när man i vardagen talar om sömnsvårigheter så menar man oftast något som i den medicinska världen kallas för insomni. Insomni innebär att man under minst tre nätter i veckan i minst tre månader upplever en eller fler av följande tre:</p>
+
+        <ul class="list-disc list-inside space-y-1">
+          <li>Svårigheter att somna in.</li>
+          <li>Svårigheter med att man vaknar och inte kan somna om.</li>
+          <li>Att man vaknar för tidigt på morgonen och inte kan somna om.</li>
+        </ul>
+
+        <p>Det måste också i sin tur leda till en negativ påverkan på individen och dess vardag. Diagnosen förklarar inte vad dessa sömnsvårigheter beror på och det kan finnas många förklaringar till varför. I Sverige uppfyller ungefär 10 % av den vuxna befolkningen diagnosen. Insomni kan ofta framgångsrikt behandlas med hjälp av sömn-KBT.</p>
+      </div>
+    </details>
 
       <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
         <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
@@ -346,96 +367,28 @@
         </div>
       </details>
 
-      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+      <details class="mt-6 rounded-2xl border bg-white p-6 group open:shadow-soft">
         <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
-          När är Sömn-KBT mindre lämpligt eller behöver anpassas?
+          Vad är skillnaden på insomni och andra sömnsvårigheter? 
           <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
         </summary>
         <div class="mt-4 space-y-4 text-slate-700">
-          <p>Vid <em>sömnapné</em>, <em>restless legs</em>, <em>kronisk smärta</em> eller <em>diabetes</em> behöver dessa tillstånd behandlas först. Kvarstående sömnproblem kan sedan adresseras med Sömn-KBT. Ett bedömningssamtal hjälper oss att avgöra vad som passar dig.</p>
+          <p>
+      Det finns andra faktorer som kan ha en negativ påverkan på sömnen där man först och främst behöver medicinsk istället för psykologisk behandling. Exempel på dessa är
+      sömnapné och Restless Leg Syndrome (RLS).</p>
         </div>
       </details>
+
 
       <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
         <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
-          Undantag – vad gäller vid skiftarbete?
+          När är Sömn-KBT inte lämpligt?
           <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
         </summary>
         <div class="mt-4 space-y-4 text-slate-700">
-          <p>Vid skiftarbete har huvudverktygen begränsad effekt. Vi kan arbeta med alternativa strategier, exempelvis “anchor sleep” (återkommande kärnsömn varje dygn) och rutiner som passar dina pass.</p>
+          <p>För att kunna applicera Sömn-KBT måste vi samarbeta med de huvudsakliga faktorerna som styr sömnen. Människor som arbetar mycket oregelbundna tider, exempelvis i skift, är inte lämpliga kandidater för Sömn-KBT.</p>
         </div>
       </details>
-
-<!--
-      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
-        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
-          Vad är sömnrestriktion – och hur lågt kan man gå?
-          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
-        </summary>
-        <div class="mt-4 space-y-4 text-slate-700">
-          <p>Sömnrestriktion innebär att tiden i sängen anpassas till den faktiska sovtiden (genomsnitt) + ca 30 min. Det jämnar ut sömnen och höjer sömnkvaliteten.</p>
-          <p>Utgångspunkten är att inte lägga sig under ~6 timmar i sängen (5,5 h sömn + 30 min insomning/vakentid) i startläget. Tiden justeras därefter utifrån sömneffektivitet och hur du mår på dagen.</p>
-        </div>
-      </details>
--->
-<!--
-      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
-        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
-          Vad är stimuluskontroll – måste jag lämna sängen?
-          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
-        </summary>
-        <div class="mt-4 space-y-4 text-slate-700">
-          <p>Målet är att hjärnan ska förknippa sängen med sömn. Om du inte somnar inom kort, eller vaknar och inte somnar om, lämnar du sängen och gör något lugnt tills sömnighet kommer – då går du tillbaka.</p>
-          <p>För vissa sätter vi en “max-tid” utanför sängen (t.ex. 30 min) för att undvika överfokusering på signaler.</p>
-        </div>
-      </details>
--->
-<!--
-      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
-        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
-          Behöver jag föra sömndagbok?
-          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
-        </summary>
-        <div class="mt-4 space-y-4 text-slate-700">
-          <p>Ja. Sömndagboken är central för att beräkna din faktiska sovtid, följa mönster och utvärdera behandling. Den fylls i på morgonen och behöver inte vara på minuten exakt.</p>
-          <p>Det finns även appar (t.ex. “CBT-i Coach”, engelska) som kan hjälpa till att räkna ut genomsnitt automatiskt.</p>
-        </div>
-      </details>
--->
-<!--
-      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
-        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
-          Hur är det med tupplurar?
-          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
-        </summary>
-        <div class="mt-4 space-y-4 text-slate-700">
-          <p>Generellt undviks tupplurar under behandlingen eftersom de sänker sömntrycket. Undantag kan göras (t.ex. hos äldre) – då korta (<30 min) och helst före kl 15.</p>
-        </div>
-      </details>
--->
-<details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
-  <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
-    Vad innebär sömnsvårigheter/problem?
-    <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
-  </summary>
-
-  <div class="mt-4 space-y-4 text-slate-700">
-    <p>
-      <strong>Sömnsvårigheter</strong> är ett väldigt brett begrepp och när man i vardagen talar om sömnsvårigheter så menar man oftast något som i den medicinska världen kallas för <strong>insomni</strong>. Det är det typiska att man har svårt med sömnen, och rent konkret så står insomni för att man under minst tre nätter i veckan under minst tre månader upplever en eller fler av följande tre:
-    </p>
-
-    <ul class="list-disc list-inside space-y-1">
-      <li><strong>Svårigheter att somna in.</strong></li>
-      <li><strong>Svårigheter med att man vaknar och inte kan somna om</strong></li>
-      <li><strong>Att man vaknar för tidigt på morgonen och inte kan somna in.</strong></li>
-    </ul>
-
-    <p>
-      och att detta i sin tur leder till en <strong>negativ påverkan på individen och dess vardag</strong>. I Sverige uppfyller ungefär 10% av den vuxna befolkningen diagnosen (referens?), och är ett stort problem i det svenska samhället. <strong>Insomni går oftast att framgångsrikt behandlas med hjälp av sömn-KBT.</strong> Utöver insomni finns det andra diagnoser som också påverkar sömnen, mer om dessa under frågan
-    </p>
-  </div>
-</details>
-
 
 
       <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
@@ -445,6 +398,17 @@
         </summary>
         <div class="mt-4 space-y-4 text-slate-700">
           <p>Sömnmedel kan ge kortvarig effekt men löser sällan orsakerna till insomni. Sömn-KBT har mer varaktig effekt. Eventuell utsättning görs säkrast i dialog med förskrivande vårdgivare.</p>
+        </div>
+      </details>
+
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Kan Sömn-KBT behandla mardrömmar?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Ja, idag finns det välbeforskade KBT metoder som fungerar oavsett om du har återkommande mardrömmar på grund av tidigare trauma eller ej. Det spelar ingen roll om drömmarna är baserade på verkliga händelser eller inte.  Behandlingsmetoden inkluderar inte exponering och har därför inte som mål att vara ångestväckande som så många andra behandlingar mot obehagliga upplevelser har. Vi behandlar endast människor med kroniska mardrömmar som är 18 år eller äldre. Om du vill få behandling för mardrömmar, boka ett bedömningssamtal hos psykolog Johan Bornold.</p>
         </div>
       </details>
 
@@ -458,6 +422,7 @@
         </div>
       </details>
     </section>
+
 
     <!-- Contact -->
     <section id="kontakt" class="py-12">
@@ -479,6 +444,7 @@
   </footer>
 
   <!-- SimplyBook modal -->
+  <!-- 
   <div id="booking-modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50" aria-hidden="true">
     <div class="bg-white rounded-2xl w-full max-w-3xl h-[75vh] shadow-soft relative">
       <button class="absolute right-3 top-3 rounded-lg px-3 py-1 border" onclick="closeBooking()">Stäng</button>
@@ -492,7 +458,8 @@
       ></iframe>
     </div>
   </div>
-
+  -->
+  <!-- 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
 
@@ -513,5 +480,6 @@
       if (e.key === 'Escape') closeBooking();
     });
   </script>
+  -->
 </body>
 </html>
