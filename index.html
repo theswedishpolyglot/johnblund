@@ -37,20 +37,24 @@
   <style>html{scroll-behavior:smooth}</style>
 </head>
 <body class="antialiased text-deep bg-foam">
-  <!-- Disclaimer Banner -->
-  <div class="fixed top-0 left-0 right-0 z-50 
-              bg-yellow-50 border-b border-yellow-200 
-              py-3 px-6 text-center text-sm text-yellow-800">
-    ⚠️ <strong>Observera:</strong> Denna webbplats är under utveckling. 
-    Inga tjänster erbjuds för tillfället. Informationen på sidan är endast 
-    preliminär och ska inte betraktas som vårderbjudande eller medicinsk rådgivning.
+  
+  <!-- Disclaimer Banner (fixed, consistent height) -->
+  <div class="fixed top-0 left-0 right-0 z-50 h-12
+              bg-yellow-50 border-b border-yellow-200
+              px-6 flex items-center justify-center text-center text-sm text-yellow-800">
+    ⚠️ <strong class="ml-1">Observera:</strong>
+    <span class="ml-2">
+      Denna webbplats är under utveckling. Inga tjänster erbjuds för tillfället.
+      Informationen på sidan är endast preliminär och ska inte betraktas som vårderbjudande eller medicinsk rådgivning.
+    </span>
   </div>
 
-  <!-- Spacer so header/content doesn't get hidden behind the fixed banner -->
+  <!-- Spacer for the fixed banner -->
   <div class="h-12"></div>
 
   <!-- Header -->
-  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+  <header class="sticky top-12 z-40 bg-foam/90 backdrop-blur border-b border-slate-200/60
+               max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
     <a href="#" class="flex items-center gap-1">
       <img src="assets/logo.svg" alt="Sömnpsykologerna" class="h-10 w-10" />
       <span class="text-2xl font-bold">Sömnpsykologerna</span>
@@ -61,7 +65,7 @@
       <a href="#faq" class="hover:opacity-80">Vanliga frågor</a>
       <a href="#kontakt" class="hover:opacity-80">Kontakt</a>
     </nav>
-    <a href="#boka" class="md:inline-block hidden rounded-xl px-4 py-2 bg-midnight text-white shadow-soft">Boka samtal</a>
+    <a href="#psykologer" class="md:inline-block hidden rounded-xl px-4 py-2 bg-midnight text-white shadow-soft">Boka videosamtal</a>
   </header>
 
   <main class="max-w-6xl mx-auto px-6">
@@ -74,9 +78,9 @@
         </h1>
         <p class="mt-5 text-lg text-slate-600">
           <ul class="mt-5 text-lg text-slate-600 list-inside pl-5 space-y-2">
-            <li>Legitimerade psykologer med fokus på sömnproblem.</li>
-            <li>Godkänd vårdgivare av IVO.</li>
-            <li>Vanligt med resultat på 2-4 veckor.</li>
+            <li>Psykologer med god erfarenhet av att behandla sömnproblem.</li>
+            <li>Vanligt med förbättring inom 2-4 veckor.</li>
+            <li>Första samtalet - 30 minuter.</li>
           </ul>
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
@@ -152,12 +156,14 @@
           </div>
         </div>
 
+<!--         
         <div class="mt-10">
           <a href="#psykologer" 
             class="inline-block rounded-xl px-6 py-3 bg-midnight text-white shadow-soft">
             Boka videosamtal
           </a>
-        </div>
+        </div> 
+-->
       </div>
     </section>
 
@@ -267,11 +273,13 @@
           Avbokning och ombokning enligt <a href="#villkor" class="underline">villkor</a>.
         </p>
 
+<!--         
         <div class="mt-6">
           <a href="#psykologer" class="rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
-            Boka
+            Boka videosamtal
           </a>
-        </div>
+        </div> 
+-->
       </div>
     </section>
 
@@ -311,10 +319,12 @@
         </div>
 
         <div class="mt-10">
+          <!--
           <a href="#psykologer" 
             class="inline-block rounded-xl px-6 py-3 bg-midnight text-white shadow-soft">
-            Boka ett bedömningssamtal
+            Boka videosamtal
           </a>
+          <!-->
         </div>
       </div>
     </section>
