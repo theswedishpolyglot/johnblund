@@ -70,7 +70,7 @@
 
   <main class="max-w-6xl mx-auto px-6">
     <!-- Hero -->
-    <section class="pt-4 pb-10 md:pt-8 md:pb-16 grid md:grid-cols-2 gap-10 items-center">
+    <section class="pt-4 pb-4 md:pt-8 md:pb-16 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h1 class="text-3xl md:text-6xl font-extrabold leading-tight text-midnight">
           Missnöjd med sömnen?<br class="hidden md:block" />
@@ -105,9 +105,9 @@
        
     </section>
 
-    <br>
+    <br class="hidden md:block">
     <!-- Problems we treat -->
-    <section id="problem" class="py-10 md:py-16 bg-white">
+    <section id="problem" class="pt-6 pb-10 md:py-16 bg-white">
       <div class="max-w-5xl mx-auto px-6 text-center">
         <h2 class="text-2xl md:text-3xl font-bold text-midnight">Dessa sömnproblem behandlar vi</h2>
 
@@ -218,7 +218,7 @@
           <div class="p-6 rounded-2xl border bg-foam shadow-soft">
             <h3 class="font-semibold text-lg text-midnight">Legitimerade psykologer</h3>
             <p class="text-slate-600 mt-2">
-              Psykolog är en <strong>skyddad titel</strong> vilket innebär att enbart personer som genomgått en psykologutbildning samt praktiskt psykologtjänstgöring (PTP) får bära titeln. 
+              Psykolog är en <strong>skyddad titel</strong> vilket innebär att enbart personer som genomgått en psykologutbildning samt praktiskt psykologtjänstgöring får bära titeln. 
             </p>
           </div>
 
@@ -240,12 +240,6 @@
         </div>
 
         <div class="mt-10">
-          <!--
-          <a href="#psykologer" 
-            class="inline-block rounded-xl px-6 py-3 bg-midnight text-white shadow-soft">
-            Boka videosamtal
-          </a>
-          <!-->
         </div>
       </div>
     </section>
@@ -371,45 +365,6 @@
   <footer class="max-w-6xl mx-auto px-6 py-12 text-sm text-slate-500">
     © <span id="y"></span> Sömnpsykologerna • <a href="#" class="underline">Integritetspolicy</a>
   </footer>
-
-  <!-- SimplyBook modal -->
-  <!-- 
-  <div id="booking-modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50" aria-hidden="true">
-    <div class="bg-white rounded-2xl w-full max-w-3xl h-[75vh] shadow-soft relative">
-      <button class="absolute right-3 top-3 rounded-lg px-3 py-1 border" onclick="closeBooking()">Stäng</button>
-      <iframe
-        id="simplybook"
-        title="Bokning"
-        class="w-full h-full rounded-2xl"
-        src="https://YOUR-SIMPLYBOOK-SUBDOMAIN.simplybook.it/v2/"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
-  </div>
-  -->
-  <!-- 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    function openBooking(e){
-      if(e) e.preventDefault();
-      document.getElementById('booking-modal').classList.remove('hidden');
-      document.getElementById('booking-modal').setAttribute('aria-hidden','false');
-    }
-    function closeBooking(){
-      document.getElementById('booking-modal').classList.add('hidden');
-      document.getElementById('booking-modal').setAttribute('aria-hidden','true');
-    }
-    // Close on overlay click or Esc
-    document.getElementById('booking-modal').addEventListener('click', (e) => {
-      if (e.target.id === 'booking-modal') closeBooking();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeBooking();
-    });
-  </script>
-  -->
 
 <script>
   const desktopTreatments = window.matchMedia("(min-width: 768px)");
