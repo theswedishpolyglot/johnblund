@@ -87,7 +87,7 @@
             <li><strong>✓ Du får verktyg som fungerar livet ut.</strong></li>
           </ul>
         </p>
-        <div class="mt-8 flex flex-wrap gap-3">
+        <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
           <a id="boka" href="#psykologer" class="rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">Boka videosamtal</a>
           <a href="#varfor" class="rounded-xl px-5 py-3 border">Varför Sömn-KBT?</a>
         </div>
@@ -172,9 +172,9 @@
         Välj den terapeut du vill boka en tid hos nedan.
       </p>
 
-      <div class="mt-10 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div id="psychologist-cards" class="mt-10 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <!-- William -->
-        <div class="p-6 rounded-2xl border bg-white shadow-soft flex flex-col items-center text-center">
+        <div id="psychologist-william" class="p-6 rounded-2xl border bg-white shadow-soft flex flex-col items-center text-center">
           <img src="assets/portrait-william.jpg" alt="William Matkaselkä" class="w-32 h-32 rounded-full object-cover shadow-soft" />
           <h3 class="mt-4 font-semibold text-lg">William Matkaselkä</h3>
           <p class="text-slate-600">Leg. psykolog</p>
@@ -188,7 +188,7 @@
         </div>
 
         <!-- Johan -->
-        <div class="p-6 rounded-2xl border bg-white shadow-soft flex flex-col items-center text-center">
+        <div id="psychologist-johan" class="p-6 rounded-2xl border bg-white shadow-soft flex flex-col items-center text-center">
           <div class="w-32 h-32 rounded-full overflow-hidden shadow-soft">
             <img src="assets/portrait-johan.jpg" alt="Johan Bornold" class="w-full h-full object-cover scale-150 translate-x-1 translate-y-1" />
           </div>
@@ -329,7 +329,7 @@
 
       <details id="faq-mardrommar-details" class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
         <summary id="faq-mardrommar" class="scroll-mt-28 font-semibold cursor-pointer list-none flex items-center justify-between">
-          <span><sup class="mr-1">3</sup>Kan Sömn-KBT behandla mardrömmar?</span>
+          <span><sup class="mr-1">3</sup>Kan ni behandla mardrömmar?</span>
           <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
         </summary>
         <div class="mt-4 space-y-4 text-slate-700">
@@ -370,6 +370,7 @@
 
 <script>
   const desktopTreatments = window.matchMedia("(min-width: 768px)");
+  const johanFirstOnMobile = Math.random() < 0.5;
 
   function syncTreatmentDetails(event) {
     document.querySelectorAll(".treatment-detail").forEach((details) => {
@@ -377,8 +378,24 @@
     });
   }
 
+  function syncPsychologistOrder(event) {
+    const cards = document.getElementById("psychologist-cards");
+    const william = document.getElementById("psychologist-william");
+    const johan = document.getElementById("psychologist-johan");
+
+    if (!cards || !william || !johan) return;
+
+    if (event.matches || !johanFirstOnMobile) {
+      cards.append(william, johan);
+    } else {
+      cards.append(johan, william);
+    }
+  }
+
   desktopTreatments.addEventListener("change", syncTreatmentDetails);
+  desktopTreatments.addEventListener("change", syncPsychologistOrder);
   syncTreatmentDetails(desktopTreatments);
+  syncPsychologistOrder(desktopTreatments);
 
   function openFaqFromHash() {
     const faqDetailsByHash = {
