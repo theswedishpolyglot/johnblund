@@ -74,13 +74,17 @@
       <div>
         <h1 class="text-3xl md:text-6xl font-extrabold leading-tight text-midnight">
           Missnöjd med sömnen?<br class="hidden md:block" />
-          <span class="bg-gradient-to-r from-sky to-lilac bg-clip-text text-transparent">Vi hjälper dig!<a href="#faq"></a></span>
+          <span class="bg-gradient-to-r from-sky to-lilac bg-clip-text text-transparent">Våra psykologer hjälper dig!<a href="#faq"></a></span>
         </h1>
         <p class="mt-5 text-lg text-slate-600">
           <ul class="mt-7 mb-7 text-lg text-slate-600 list-inside pl-5 space-y-2">
-            <li><strong>✓ Resultat inom 2-4 veckor.</strong></li>
-            <li><strong>✓ Verktyg som fungerar livet ut.</strong></li>
-            <li><strong>✓ Inga mediciner behövs.</strong></li>
+            <li>
+              <strong>✓ Du ser resultat inom 2-4 veckor.</strong><sup><a href="#faq-effekt" aria-label="Läs mer om hur snabbt Sömn-KBT ger effekt" class="ml-0.5 text-midnight hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-sky/40 rounded-sm no-underline">1</a></sup>
+            </li>
+            <li>
+              <strong>✓ Du slipper mediciner.</strong><sup><a href="#faq-mediciner" aria-label="Läs mer om sömnmediciner" class="ml-0.5 text-midnight hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-sky/40 rounded-sm no-underline">2</a></sup>
+            </li>
+            <li><strong>✓ Du får verktyg som fungerar livet ut.</strong></li>
           </ul>
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
@@ -103,93 +107,61 @@
 
     <br>
     <!-- Problems we treat -->
-    <section id="problem" class="py-16 bg-white">
+    <section id="problem" class="py-10 md:py-16 bg-white">
       <div class="max-w-5xl mx-auto px-6 text-center">
         <h2 class="text-2xl md:text-3xl font-bold text-midnight">Dessa sömnproblem behandlar vi</h2>
 
-        <div class="mt-12 grid md:grid-cols-3 gap-6 text-left">
-          <div class="p-6 rounded-2xl border bg-foam shadow-soft">
-            <h3 class="font-semibold text-lg text-midnight">Svårigheter med insomning</h3>
-            <p class="text-slate-600 mt-2">
-              Lång tid till insomning, ofta över 30–60 minuter.
-            </p>
-          </div>
+        <div class="mt-7 md:mt-12 rounded-2xl border bg-foam px-5 shadow-soft text-center divide-y divide-slate-200 md:grid md:grid-cols-3 md:gap-6 md:divide-y-0 md:border-0 md:bg-transparent md:p-0 md:shadow-none md:text-left">
+          <details class="treatment-detail group py-4 md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
+            <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
+              <span>Svårigheter med insomning</span>
+              <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600 md:block md:mt-2 md:text-base">Lång tid till insomning, ofta över 30–60 minuter.</p>
+          </details>
 
-          <div class="p-6 rounded-2xl border bg-foam shadow-soft">
-            <h3 class="font-semibold text-lg text-midnight">Problem med uppvaknanden</h3>
-            <p class="text-slate-600 mt-2">
-              Upprepade uppvaknanden eller svårigheter att somna om efter nattliga uppvaknanden.
-            </p>
-          </div>
+          <details class="treatment-detail group py-4 md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
+            <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
+              <span>Problem med uppvaknanden</span>
+              <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600 md:block md:mt-2 md:text-base">Upprepade uppvaknanden eller svårigheter att somna om efter nattliga uppvaknanden.</p>
+          </details>
 
-          <div class="p-6 rounded-2xl border bg-foam shadow-soft">
-            <h3 class="font-semibold text-lg text-midnight">Överdrivet mycket sömn</h3>
-            <p class="text-slate-600 mt-2">
-              Överdrivet mycket sömn (t. ex. 9-12 timmar) och sömnighet trots detta.
-            </p>
-          </div>
+          <details class="treatment-detail group py-4 md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
+            <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
+              <span>Överdrivet mycket sömn</span>
+              <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600 md:block md:mt-2 md:text-base">Överdrivet mycket sömn (t. ex. 9-12 timmar) och sömnighet trots detta.</p>
+          </details>
 
-          <div class="p-6 rounded-2xl border bg-foam shadow-soft">
-            <h3 class="font-semibold text-lg text-midnight">Störande tankeverksamhet</h3>
-            <p class="text-slate-600 mt-2">
-              Sömnrelaterad och icke-sömnrelaterad tankeverksamhet som stör sömnen, t. ex. oro eller grubblerier.
-            </p>
-          </div>
+          <details class="treatment-detail group py-4 md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
+            <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
+              <span>Störande tankeverksamhet</span>
+              <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600 md:block md:mt-2 md:text-base">Sömnrelaterad och icke-sömnrelaterad tankeverksamhet som stör sömnen, t. ex. oro eller grubblerier.</p>
+          </details>
 
-          <div class="p-6 rounded-2xl border bg-foam shadow-soft">
-            <h3 class="font-semibold text-lg text-midnight">Mardrömmar<a href="#faq-mardrommar" class="text-midnight hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-sky/40 rounded-sm no-underline">*</a></h3>
-            <p class="text-slate-600 mt-2">
-              Traumarelaterade och icke-traumarelaterade mardrömmar.
-            </p>
-          </div>
+          <details class="treatment-detail group py-4 md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
+            <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
+              <span>Mardrömmar<sup><a href="#faq-mardrommar" aria-label="Läs mer om behandling av mardrömmar" class="ml-0.5 text-midnight hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-sky/40 rounded-sm no-underline">3</a></sup></span>
+              <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600 md:block md:mt-2 md:text-base">Traumarelaterade och icke-traumarelaterade mardrömmar.</p>
+          </details>
 
-          <div class="p-6 rounded-2xl border bg-foam shadow-soft">
-            <h3 class="font-semibold text-lg text-midnight">Stress och ångest</h3>
-            <p class="text-slate-600 mt-2">
-              Sömnproblem som påverkas av stress, ångest eller annan psykisk ohälsa.
-            </p>
-          </div>
+          <details class="treatment-detail group py-4 md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
+            <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
+              <span>Svårigheter med nedvarvning</span>
+              <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600 md:block md:mt-2 md:text-base">Sömnproblem som beror på svårigheter med nedvarvning på grund av stress, ångest eller annan psykisk ohälsa.</p>
+          </details>
         </div>
-
-<!--         
-        <div class="mt-10">
-          <a href="#psykologer" 
-            class="inline-block rounded-xl px-6 py-3 bg-midnight text-white shadow-soft">
-            Boka videosamtal
-          </a>
-        </div> 
--->
       </div>
     </section>
-
-    <!-- How it works -->
-<!--
-    <section id="hur" class="py-12">
-      <div class="rounded-3xl p-8 md:p-12 bg-gradient-to-br from-white to lilac/20 border">
-        <h2 class="text-2xl md:text-3xl font-bold text-midnight text-center">Så går det till</h2>
-        <ol class="mt-6 grid md:grid-cols-3 gap-6">
-          <li class="bg-white rounded-2xl p-6 border shadow-soft">
-            <p class="text-sm font-medium text-slate-500">Steg 1</p>
-            <h3 class="font-semibold mt-1">Bedömningssamtal</h3>
-            <p class="text-slate-600 mt-2">Kartläggning av dina sömnproblem för att se om behandlingen är lämplig för dig.</p>
-          </li>
-          <li class="bg-white rounded-2xl p-6 border shadow-soft">
-            <p class="text-sm font-medium text-slate-500">Steg 2</p>
-            <h3 class="font-semibold mt-1">Behandling</h3>
-            <p class="text-slate-600 mt-2">Behandling med tydlig struktur anpassad efter dina sömnproblem.</p>
-          </li>
-          <li class="bg-white rounded-2xl p-6 border shadow-soft">
-            <p class="text-sm font-medium text-slate-500">Steg 3</p>
-            <h3 class="font-semibold mt-1">Avslut</h3>
-            <p class="text-slate-600 mt-2">Avslut av behandling med en plan för framtiden. Du är nu din egen sömnterapeut!</p>
-          </li>
-        </ol>
--->
-<!--         
-        <div class="mt-8">
-          <a href="#simplybook" class="rounded-xl px-5 py-3 bg-midnight text-white shadow-soft" onclick="openBooking(event)">Boka bedömningssamtal</a>
-        </div>
--->
       </div>
     </section>
 
@@ -230,45 +202,6 @@
         </div>
       </div>
     </section>
-
-
-    <!-- Pricing -->
-    <!--
-    <section id="priser" class="py-12" style="text-align: center;">
-      <h2 class="text-2xl font-bold text-midnight">Priser</h2>
-
-      <div class="mt-6 p-6 rounded-2xl border bg-white shadow-soft max-w-xl mx-auto">
-        <table class="w-full text-left">
-          <thead class="text-sm text-slate-500">
-            <tr>
-              <th class="py-3 pr-4 font-medium">Samtalstyp</th>
-              <th class="py-3 pl-4 font-medium text-right">Pris</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y">
-            <tr>
-              <td class="py-4 pr-4 font-medium text-midnight">
-                Digitalt besök
-              </td>
-              <td class="py-4 pl-4 text-right font-semibold text-midnight">
-                1 000 kr
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p class="text-xs text-slate-500 mt-4">
-          Avbokning och ombokning enligt <a href="#villkor" class="underline">villkor</a>.
-        </p>
-      -->
-
-<!--         
-        <div class="mt-6">
-          <a href="#psykologer" class="rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
-            Boka videosamtal
-          </a>
-        </div> 
--->
       </div>
     </section>
 
@@ -285,8 +218,7 @@
           <div class="p-6 rounded-2xl border bg-foam shadow-soft">
             <h3 class="font-semibold text-lg text-midnight">Legitimerade psykologer</h3>
             <p class="text-slate-600 mt-2">
-              Psykolog är en <strong>skyddad titel</strong>. 
-              Det innebär att vi uppfyller höga krav på utbildning. <s>Vi är även godkända vårdgivare av Inspektionen för vård och omsorg (IVO)</s>.
+              Psykolog är en <strong>skyddad titel</strong> som kräver en 5-årig utbildning på ett av Sveriges Psykologprogram följt av ett års praktik under handledning. 
             </p>
           </div>
 
@@ -341,13 +273,13 @@
       </div>
     </details>
 
-      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
-        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
-          Hur snabbt märks effekt av Sömn-KBT?
+      <details id="faq-effekt-details" class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary id="faq-effekt" class="scroll-mt-28 font-semibold cursor-pointer list-none flex items-center justify-between">
+          <span><sup class="mr-1">1</sup>Hur snabbt märks effekten av Sömn-KBT?</span>
           <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
         </summary>
         <div class="mt-4 space-y-4 text-slate-700">
-          <p>Många märker tydlig förbättring inom 2–4 veckor. Behandlingen minskar insomningstid, nattliga uppvaknanden och förbättrar sömnkvalitet.</p>
+          <p>Majoriteten som påbörjar Sömn-KBT-behandling ser positiva resultat inom 2–4 veckor. Det behandlingen främst gör är att den minskar tiden det tar att somna in, antal nattliga uppvaknanden och ger en förbättring av sömnkvaliteten.</p>
         </div>
       </details>
 
@@ -387,9 +319,9 @@
       </details>
 
 
-      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
-        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
-          Hur ska jag tänka kring sömnmediciner?
+      <details id="faq-mediciner-details" class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary id="faq-mediciner" class="scroll-mt-28 font-semibold cursor-pointer list-none flex items-center justify-between">
+          <span><sup class="mr-1">2</sup>Hur ska jag tänka kring sömnmediciner?</span>
           <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
         </summary>
         <div class="mt-4 space-y-4 text-slate-700">
@@ -400,12 +332,12 @@
 
 
       <details id="faq-mardrommar-details" class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
-        <summary id="faq-mardrommar"class="font-semibold cursor-pointer list-none flex items-center justify-between">
-          Kan Sömn-KBT behandla mardrömmar?
+        <summary id="faq-mardrommar" class="scroll-mt-28 font-semibold cursor-pointer list-none flex items-center justify-between">
+          <span><sup class="mr-1">3</sup>Kan Sömn-KBT behandla mardrömmar?</span>
           <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
         </summary>
         <div class="mt-4 space-y-4 text-slate-700">
-          <p>Ja, idag finns det välbeforskade KBT metoder som fungerar oavsett om du har återkommande mardrömmar på grund av tidigare trauma eller ej. Det spelar ingen roll om drömmarna är baserade på verkliga händelser eller inte.  Behandlingsmetoden inkluderar inte exponering och har därför inte som mål att vara ångestväckande som så många andra behandlingar mot obehagliga upplevelser har. Vi behandlar endast människor med kroniska mardrömmar som är 18 år eller äldre. Om du vill få behandling för mardrömmar, boka ett bedömningssamtal hos psykolog Johan Bornold.</p>
+          <p>Ja, idag finns det välbeforskade KBT metoder som fungerar oavsett om du har återkommande mardrömmar på grund av tidigare trauma eller ej. Det spelar ingen roll om drömmarna är baserade på verkliga händelser eller inte.  Behandlingsmetoden inkluderar inte exponering och har därför inte som mål att vara ångestväckande som så många andra behandlingar mot obehagliga upplevelser har. Vi behandlar endast människor med kroniska mardrömmar som är 18 år eller äldre. <strong>Om du vill få behandling för mardrömmar, boka ett bedömningssamtal hos psykolog Johan Bornold.</strong></p>
         </div>
       </details>
 
@@ -480,11 +412,26 @@
   -->
 
 <script>
+  const desktopTreatments = window.matchMedia("(min-width: 768px)");
+
+  function syncTreatmentDetails(event) {
+    document.querySelectorAll(".treatment-detail").forEach((details) => {
+      details.open = event.matches;
+    });
+  }
+
+  desktopTreatments.addEventListener("change", syncTreatmentDetails);
+  syncTreatmentDetails(desktopTreatments);
+
   function openFaqFromHash() {
-    if (location.hash === "#faq-mardrommar") {
-      const details = document.getElementById("faq-mardrommar-details");
-      if (details) details.open = true;
-    }
+    const faqDetailsByHash = {
+      "#faq-effekt": "faq-effekt-details",
+      "#faq-mediciner": "faq-mediciner-details",
+      "#faq-mardrommar": "faq-mardrommar-details"
+    };
+    const detailsId = faqDetailsByHash[location.hash];
+    const details = detailsId && document.getElementById(detailsId);
+    if (details) details.open = true;
   }
   window.addEventListener("hashchange", openFaqFromHash);
   openFaqFromHash();
