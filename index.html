@@ -82,7 +82,7 @@
               <strong>✓ Du ser resultat inom ett par veckor.</strong><sup><a href="#faq-effekt" aria-label="Läs mer om hur snabbt Sömn-KBT ger effekt" class="ml-0.5 text-midnight hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-sky/40 rounded-sm no-underline">1</a></sup>
             </li>
             <li>
-              <strong>✓ Du slipper mediciner.</strong><sup><a href="#faq-mediciner" aria-label="Läs mer om sömnmediciner" class="ml-0.5 text-midnight hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-sky/40 rounded-sm no-underline">2</a></sup>
+              <strong>✓ Du slipper mediciner.</strong><sup class="hidden"><a href="#faq-mediciner" aria-label="Läs mer om sömnmediciner" class="ml-0.5 text-midnight hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-sky/40 rounded-sm no-underline">2</a></sup>
             </li>
             <li><strong>✓ Du får verktyg som fungerar livet ut.</strong></li>
           </ul>
@@ -197,7 +197,7 @@
             Boka Johan
           </a>
           <p class="mt-4 text-slate-600 text-sm leading-relaxed">
-            Leg. psykolog med särskilt fokus på sömn. Han har arbetat med Sömn-KBT i individuell behandling,  utvecklat behandlingsmanualer, utbildat personal och infört behandlingsmetoden på flera vårdcentraler. Han brinner för att göra sömnbehandling mer tillgänglig. <strong>Endast för patienter som <u>inte</u> är listade i region Örebro län.</strong>
+            Leg. psykolog med särskilt fokus på sömn. Han har arbetat med Sömn-KBT i flera år. Utöver individuell terapi har han utvecklat behandlingsmanualer, utbildat personal och infört behandlingsmetoden på flera vårdcentraler i Sverige. Han brinner för att göra sömnbehandling mer tillgänglig och ser fram emot att träffa dig. <strong>Endast för patienter som <u>inte</u> är listade i region Örebro län.</strong>
           </p>
         </div>
       </div>
@@ -348,20 +348,40 @@
     <!-- Contact -->
     <section id="kontakt" class="py-12">
       <h2 class="text-2xl font-bold text-midnight">Kontakt</h2>
-      <p class="text-slate-600 mt-2">Har du frågor eller vill bli kontaktad? Skriv till oss så återkommer vi.</p>
-      <form action="https://formspree.io/f/YOUR-FORMSPREE-ID" method="POST" class="mt-6 grid md:grid-cols-2 gap-4">
-        <input class="border rounded-xl px-4 py-3" name="email" type="email" placeholder="du@example.com" required />
-        <input class="border rounded-xl px-4 py-3" name="name" placeholder="Ditt namn" />
-        <textarea class="border rounded-xl px-4 py-3 md:col-span-2" name="message" rows="4" placeholder="Hur kan vi hjälpa dig?"></textarea>
-        <button class="rounded-xl px-5 py-3 bg-midnight text-white w-max shadow-soft">Skicka</button>
-      </form>
-      <p class="text-xs text-slate-500 mt-3">Genom att skicka formuläret godkänner du att vi kontaktar dig via e-post.</p>
+      <div class="mt-6 rounded-2xl border bg-white p-6 shadow-soft">
+        <p class="text-slate-700">
+          <!-- E-mail: -->
+          <a href="mailto:info@somnpsykologerna.se" class="font-semibold text-midnight underline">info@somnpsykologerna.se</a>
+        </p>
+        <p class="mt-3 text-slate-700">
+          Det går att mejla oss med <strong>allmänna frågor</strong> om till exempel bokning eller hur behandling går till.
+        </p>
+        <p class="mt-4 text-sm font-semibold leading-relaxed text-slate-700">
+          Men skicka inte personnummer, hälsouppgifter eller känslig information via e-post.<br>
+          För patientärenden använder vi säker inloggning med BankID via journalsystemet CTNotes.
+        </p>
+        <div class="mt-6 border-t border-slate-200 pt-4">
+          <p class="text-2xl tracking-[0.35em] text-slate-700" aria-label="CTNotes">
+            <span class="text-orange-500">C</span><span class="text-orange-500">T</span>Notes
+          </p>
+          <p class="mt-1 text-sm italic text-slate-700">
+            Vi använder journalsystemet CTNotes för hantering av dina uppgifter, läs mer på
+            <a href="https://ctnotes.com" class="underline" rel="noopener" target="_blank">ctnotes.com</a>
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="max-w-6xl mx-auto px-6 py-12 text-sm text-slate-500">
-    © <span id="y"></span> Sömnpsykologerna • <a href="#" class="underline">Integritetspolicy</a>
+    <div class="flex flex-col items-start gap-3">
+      <div class="flex items-center gap-2 text-midnight">
+        <img src="assets/logo.svg" alt="" class="h-8 w-8" />
+        <span class="text-lg font-bold">Sömnpsykologerna</span>
+      </div>
+      <p>© <span id="y"></span> Sömnpsykologerna</p>
+    </div>
   </footer>
 
 <script>
