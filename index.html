@@ -53,25 +53,43 @@
   <div class="h-12"></div>
 
   <!-- Header -->
-  <header class="sticky top-12 z-40 bg-foam/90 backdrop-blur border-b border-slate-200/60
-                max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="#" class="flex items-center gap-1">
-      <img src="assets/logo.svg" alt="Sömnpsykologerna" class="h-10 w-10" />
-      <span class="text-2xl font-bold">Sömnpsykologerna</span>
-    </a>
-    <nav class="hidden md:flex gap-6">
-      <a href="#psykologer" class="hover:opacity-80">Våra psykologer</a>
-      <!-- <a href="#priser" class="hover:opacity-80">Priser</a> -->
-      <a href="#faq" class="hover:opacity-80">Vanliga frågor</a>
-      <a href="#kontakt" class="hover:opacity-80">Kontakt</a>
-    </nav>
-    <a href="#psykologer" class="md:inline-block hidden rounded-xl px-4 py-2 bg-midnight text-white shadow-soft">Boka videosamtal</a>
+  <header class="sticky top-12 z-40 w-full bg-foam/90 backdrop-blur border-b border-slate-200/60">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-1">
+        <img src="assets/logo.svg" alt="Sömnpsykologerna" class="h-10 w-10" />
+        <span class="text-2xl font-bold">Sömnpsykologerna</span>
+      </a>
+      <nav class="hidden md:flex gap-6">
+        <a href="#psykologer" class="hover:opacity-80">Våra psykologer</a>
+        <!-- <a href="#priser" class="hover:opacity-80">Priser</a> -->
+        <a href="#faq" class="hover:opacity-80">Vanliga frågor</a>
+        <a href="#kontakt" class="hover:opacity-80">Kontakt</a>
+      </nav>
+      <a href="#psykologer" class="md:inline-block hidden rounded-xl px-4 py-2 bg-midnight text-white shadow-soft">Boka videosamtal</a>
+    </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-6">
+  <main>
     <!-- Hero -->
-    <section class="pt-4 pb-4 md:pt-8 md:pb-16 grid md:grid-cols-2 gap-10 items-center">
-      <div>
+    <section class="relative overflow-hidden bg-foam pt-4 pb-4 md:pt-8 md:pb-16">
+      <img
+        src="assets/hero-broll-desktop-wide.png"
+        alt=""
+        class="absolute inset-0 hidden h-full w-full object-cover md:block"
+        aria-hidden="true"
+        loading="eager"
+      />
+      <img
+        src="assets/hero-broll-mobile.png"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover md:hidden"
+        aria-hidden="true"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-foam via-foam/85 to-foam/25 md:hidden"></div>
+      <div class="absolute inset-0 hidden bg-gradient-to-r from-foam via-foam/85 to-foam/20 md:block"></div>
+      <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-6 md:grid-cols-2">
+      <div class="py-4 md:py-20">
         <h1 class="text-3xl md:text-6xl font-extrabold leading-tight text-midnight">
           Missnöjd med sömnen?<br class="hidden md:block" />
           <span class="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 bg-clip-text text-transparent">Våra psykologer hjälper dig!<a href="#faq"></a></span>
@@ -94,13 +112,7 @@
         <p class="mt-3 text-xs text-slate-500"></p> <!-- Add any disclaimers here if needed -->
       </div>
       
-      <div class="w-full rounded-2xl shadow-soft overflow-hidden">
-        <img
-          src="assets/hero.png"
-          alt="Sömn-KBT – behandling mot insomni"
-          class="hidden md:block w-full rounded-2xl shadow-soft"
-          loading="eager"
-        />
+      <div class="hidden md:block" aria-hidden="true"></div>
       </div>
        
     </section>
@@ -164,7 +176,7 @@
     </section>
 
     <!-- Våra sömnpsykologer -->
-    <section id="psykologer" class="py-16">
+    <section id="psykologer" class="max-w-6xl mx-auto px-6 py-16">
       <h2 class="text-2xl md:text-3xl font-bold text-midnight text-center">Våra sömnpsykologer</h2>
       <p class="text-slate-600 mt-3 text-center max-w-2xl mx-auto">
         Välj den terapeut du vill boka en tid hos nedan.
@@ -244,7 +256,7 @@
 
 
     <!-- FAQ (expanded from your background docs) -->
-    <section id="faq" class="py-12">
+    <section id="faq" class="max-w-6xl mx-auto px-6 py-12">
       <h2 class="text-2xl font-bold text-midnight">Vanliga frågor</h2>
 
     <details class="mt-6 rounded-2xl border bg-white p-6 group open:shadow-soft">
@@ -346,7 +358,7 @@
 
 
     <!-- Contact -->
-    <section id="kontakt" class="py-12">
+    <section id="kontakt" class="max-w-6xl mx-auto px-6 py-12">
       <h2 class="text-2xl font-bold text-midnight">Kontakt</h2>
       <div class="mt-6 rounded-2xl border bg-white p-6 shadow-soft">
         <p class="text-slate-700">
