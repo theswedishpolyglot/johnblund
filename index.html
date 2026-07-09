@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Sömn-KBT som fungerar – Resultat på 2–4 veckor</title>
+  <title>Sömnpsykologerna</title>
   <meta name="description" content="Evidensbaserad Sömn-KBT (insomni) av legitimerade psykologer. Bedömning, individanpassad behandling och uppföljning. Boka bedömningssamtal." />
   <meta property="og:title" content="Sömn-KBT som fungerar" />
   <meta property="og:description" content="Evidensbaserad behandling av insomni – ofta effekt på 2–4 veckor." />
@@ -36,7 +36,915 @@
       }
     }
   </script>
-  <style>html{scroll-behavior:smooth}</style>
+  <style>
+    :root {
+      --sleep-ink: #142033;
+      --sleep-muted: #526276;
+      --sleep-paper: #f3f7fa;
+      --sleep-surface: #fbfdff;
+      --sleep-white: #ffffff;
+      --sleep-line: rgba(126, 151, 179, 0.24);
+      --sleep-blue: #245f8f;
+      --sleep-blue-dark: #173d66;
+      --sleep-blue-soft: #dbeaf5;
+      --sleep-lilac: #ccd5f4;
+      --sleep-shadow: 0 18px 45px rgba(20, 32, 51, 0.11);
+      --sleep-radius: 10px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--sleep-paper);
+      color: var(--sleep-ink);
+      line-height: 1.56;
+    }
+
+    h1,
+    h2 {
+      font-family: Georgia, "Times New Roman", ui-serif, serif;
+      font-weight: 800;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6,
+    button,
+    input,
+    textarea,
+    select,
+    summary {
+      font-family: inherit;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: linear-gradient(180deg, #f6f9fc 0%, var(--sleep-paper) 100%);
+    }
+
+    .shadow-soft {
+      box-shadow: var(--sleep-shadow) !important;
+    }
+
+    .text-midnight,
+    .text-deep {
+      color: var(--sleep-ink) !important;
+    }
+
+    .text-slate-600,
+    .text-slate-700,
+    .text-slate-500 {
+      color: var(--sleep-muted) !important;
+    }
+
+    .bg-foam {
+      background-color: var(--sleep-paper) !important;
+    }
+
+    .bg-midnight {
+      background-color: var(--sleep-blue-dark) !important;
+    }
+
+    .border,
+    .border-slate-200,
+    .border-slate-200\/60 {
+      border-color: var(--sleep-line) !important;
+    }
+
+    .rounded-xl,
+    .rounded-2xl,
+    .rounded-3xl {
+      border-radius: var(--sleep-radius) !important;
+    }
+
+    header {
+      background: rgba(243, 247, 250, 0.92) !important;
+      border-color: var(--sleep-line) !important;
+      backdrop-filter: blur(18px);
+    }
+
+    header > div {
+      min-height: 72px;
+      gap: 1.5rem;
+      padding-block: 0 !important;
+    }
+
+    .fixed.top-0 {
+      background: rgba(255, 251, 235, 0.92) !important;
+      backdrop-filter: blur(12px);
+    }
+
+    header .max-w-6xl,
+    main > section > .max-w-5xl,
+    #psykologer > h2,
+    #psykologer > p,
+    #psykologer > #psychologist-cards,
+    #kontakt > h2,
+    #kontakt > div,
+    footer > div {
+      width: min(72rem, calc(100% - 3rem));
+      max-width: none !important;
+      margin-inline: auto !important;
+      padding-inline: 0 !important;
+    }
+
+    header img,
+    footer img {
+      filter: drop-shadow(0 7px 14px rgba(20, 32, 51, 0.08));
+    }
+
+    header img {
+      width: 36px !important;
+      height: 36px !important;
+    }
+
+    header .text-2xl {
+      font-family: inherit;
+      font-size: 1.08rem !important;
+      font-weight: 850 !important;
+      letter-spacing: -0.035em;
+    }
+
+    header a:first-child {
+      gap: 0.65rem !important;
+      min-width: 0;
+      text-decoration: none;
+    }
+
+    header nav {
+      margin-left: auto;
+      gap: 1.35rem !important;
+      color: var(--sleep-blue-dark);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    header nav a,
+    footer button,
+    a {
+      transition: color 160ms ease, border-color 160ms ease, background 160ms ease, opacity 160ms ease, transform 160ms ease;
+    }
+
+    header nav a:hover,
+    footer button:hover,
+    #kontakt a:hover {
+      color: var(--sleep-blue) !important;
+    }
+
+    header > div > a:last-child {
+      border: 1px solid var(--sleep-blue);
+      background: transparent !important;
+      color: var(--sleep-blue-dark) !important;
+      box-shadow: none !important;
+      padding: 0.65rem 0.9rem !important;
+      font-size: 0.92rem;
+    }
+
+    header > div > a:last-child:hover {
+      border-color: var(--sleep-blue-dark);
+      background: rgba(36, 95, 143, 0.07) !important;
+      color: var(--sleep-blue-dark) !important;
+      transform: none !important;
+    }
+
+    .hero-section {
+      min-height: 640px;
+      display: grid;
+      align-items: center;
+      padding-block: 3.8rem 4.4rem !important;
+    }
+
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 34%;
+      pointer-events: none;
+      background: linear-gradient(0deg, var(--sleep-paper), rgba(243, 247, 250, 0));
+      z-index: 0;
+    }
+
+    .hero-section > img {
+      filter: saturate(0.96);
+    }
+
+    .hero-section .hero-inner {
+      width: min(72rem, calc(100% - 3rem));
+      padding-inline: 0 !important;
+      z-index: 1;
+    }
+
+    .hero-section h1 {
+      font-family: Georgia, "Times New Roman", ui-serif, serif;
+      font-weight: 800 !important;
+      letter-spacing: -0.045em;
+      line-height: 1.02;
+    }
+
+    .hero-section h1::before {
+      content: "Videosamtal med psykolog kvällar och helger";
+      display: block;
+      margin: 0 0 0.75rem;
+      color: var(--sleep-blue);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .hero-section h1 span {
+      background-image: linear-gradient(90deg, #123f6b, #24689d, #5b82c7) !important;
+    }
+
+    .hero-section ul {
+      padding-left: 0 !important;
+      list-style: none !important;
+    }
+
+    .hero-section li {
+      width: fit-content;
+      max-width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: var(--sleep-radius);
+      background: rgba(251, 253, 255, 0.66);
+      padding: 0.55rem 0.75rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-section li strong {
+      font-weight: 850;
+    }
+
+    .hero-section a.rounded-xl,
+    #psychologist-cards a,
+    header a.rounded-xl {
+      border: 1px solid transparent;
+      border-radius: var(--sleep-radius) !important;
+      font-weight: 800;
+    }
+
+    .hero-section a.bg-midnight,
+    #psychologist-cards a.bg-midnight,
+    header a.bg-midnight {
+      background: var(--sleep-blue-dark) !important;
+      box-shadow: 0 12px 24px rgba(23, 61, 102, 0.18) !important;
+    }
+
+    .hero-section a.bg-midnight:hover,
+    #psychologist-cards a.bg-midnight:hover,
+    header a.bg-midnight:hover {
+      background: var(--sleep-blue) !important;
+      transform: translateY(-1px);
+    }
+
+    header > div > a.bg-midnight {
+      border: 1px solid var(--sleep-blue) !important;
+      background: transparent !important;
+      color: var(--sleep-blue-dark) !important;
+      box-shadow: none !important;
+    }
+
+    header > div > a.bg-midnight:hover {
+      border-color: var(--sleep-blue-dark) !important;
+      background: rgba(36, 95, 143, 0.07) !important;
+      color: var(--sleep-blue-dark) !important;
+      transform: none;
+    }
+
+    .hero-section a.border {
+      background: rgba(251, 253, 255, 0.72);
+      border-color: rgba(255, 255, 255, 0.84) !important;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-psychologists {
+      position: relative;
+      border-color: rgba(255, 255, 255, 0.76) !important;
+      background: rgba(251, 253, 255, 0.78) !important;
+      box-shadow: var(--sleep-shadow) !important;
+    }
+
+    .hero-psychologists::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      z-index: -1;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(251,253,255,0.94), rgba(191, 213, 235, 0.36));
+    }
+
+    .hero-psychologists img,
+    .hero-psychologists .aspect-square {
+      border-radius: var(--sleep-radius) !important;
+    }
+
+    #problem,
+    #varfor {
+      background: var(--sleep-surface) !important;
+    }
+
+    #psykologer,
+    #faq,
+    #kontakt {
+      width: 100% !important;
+      max-width: none !important;
+      margin-inline: 0 !important;
+      padding-inline: 0 !important;
+      background: var(--sleep-paper);
+    }
+
+    main > section:not(.hero-section) {
+      position: relative;
+      overflow: hidden;
+      padding-block: 5.5rem !important;
+      z-index: 0;
+    }
+
+    main > section:not(.hero-section) > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    main > section h2 {
+      letter-spacing: -0.035em;
+      line-height: 1.04;
+    }
+
+    main > section h3 {
+      letter-spacing: -0.015em;
+    }
+
+    #problem {
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid var(--sleep-line);
+      border-bottom: 1px solid var(--sleep-line);
+    }
+
+    #problem h2,
+    #varfor h2,
+    #psykologer h2,
+    #faq h2,
+    #kontakt h2 {
+      font-size: clamp(2rem, 4vw, 3.1rem) !important;
+    }
+
+    #psykologer,
+    #faq,
+    #kontakt {
+      position: relative;
+    }
+
+    .treatment-detail,
+    #psychologist-cards > div,
+    #varfor .grid > div,
+    #faq details,
+    #kontakt > div {
+      border-color: var(--sleep-line) !important;
+      background: var(--sleep-surface) !important;
+      box-shadow: 0 10px 28px rgba(20, 32, 51, 0.06) !important;
+    }
+
+    .treatment-detail p,
+    #varfor .grid p,
+    #faq p,
+    #kontakt p {
+      line-height: 1.68;
+    }
+
+    .treatment-detail {
+      min-height: 12rem;
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .problem-icon {
+      display: inline-flex;
+      width: 2.45rem;
+      height: 2.45rem;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      border: 1px solid rgba(36, 95, 143, 0.16);
+      border-radius: 999px;
+      background: var(--sleep-blue-soft);
+      color: var(--sleep-blue-dark);
+    }
+
+    .problem-icon svg {
+      width: 1.18rem;
+      height: 1.18rem;
+      stroke-width: 2.15;
+    }
+
+    .problem-icon-danger {
+      border-color: rgba(185, 74, 72, 0.22);
+      background: #fdeaea;
+      color: #b94a48;
+    }
+
+    .treatment-detail:hover {
+      transform: translateY(-2px);
+      border-color: rgba(36, 95, 143, 0.26) !important;
+    }
+
+    #problem .rounded-2xl:first-of-type {
+      background: transparent !important;
+    }
+
+    #problem .md\:bg-transparent {
+      background: transparent !important;
+    }
+
+    #problem .divide-y {
+      background: transparent !important;
+    }
+
+    #problem .treatment-detail {
+      background: var(--sleep-surface) !important;
+    }
+
+    #psykologer {
+      padding-block: 6rem !important;
+    }
+
+    #psychologist-cards {
+      max-width: 58rem !important;
+    }
+
+    #psychologist-cards > div {
+      position: relative;
+      align-items: flex-start !important;
+      overflow: hidden;
+      padding: 1rem !important;
+      text-align: left !important;
+    }
+
+    #psychologist-cards > div::after {
+      display: none;
+    }
+
+    #psychologist-cards > div > img,
+    #psychologist-cards > div > .w-32 {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 4 / 3;
+      border-radius: var(--sleep-radius) !important;
+    }
+
+    #psychologist-cards h3,
+    #psychologist-cards p,
+    #psychologist-cards a {
+      margin-left: 0.35rem;
+      margin-right: 0.35rem;
+    }
+
+    #psychologist-cards h3 {
+      font-size: 1.25rem;
+    }
+
+    #psychologist-cards a {
+      align-self: flex-start;
+    }
+
+    #varfor .grid > div {
+      position: relative;
+      overflow: hidden;
+      border-top: 4px solid rgba(36, 95, 143, 0.22);
+      transition: transform 160ms ease, border-color 160ms ease;
+    }
+
+    #varfor .grid > div::before {
+      display: none;
+    }
+
+    .why-icon {
+      display: inline-flex;
+      width: 2.35rem;
+      height: 2.35rem;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      border: 1px solid rgba(36, 95, 143, 0.18);
+      border-radius: 999px;
+      background: var(--sleep-blue-soft);
+      color: var(--sleep-blue-dark);
+    }
+
+    .why-icon svg {
+      width: 1.18rem;
+      height: 1.18rem;
+      stroke-width: 2.2;
+    }
+
+    #varfor h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    #varfor .why-grid {
+      max-width: 52rem;
+      margin-inline: auto;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    #varfor .why-card-us {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    #varfor .why-card-availability {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    #varfor .why-card-evidence {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    #varfor .why-card-effect {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    #varfor .grid > div:hover {
+      transform: translateY(-2px);
+      border-top-color: rgba(36, 95, 143, 0.48) !important;
+    }
+
+    #faq {
+      width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-inline: 0 !important;
+      max-width: none !important;
+    }
+
+    #faq .faq-inner {
+      width: min(58rem, calc(100% - 3rem));
+      margin-inline: auto;
+    }
+
+    #faq .faq-inner > h2,
+    #faq .faq-inner > details {
+      width: auto !important;
+      max-width: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    #faq h2,
+    #kontakt h2 {
+      text-align: left;
+    }
+
+    #faq h2::before,
+    #kontakt h2::before {
+      display: block;
+      margin: 0 0 0.65rem;
+      color: var(--sleep-blue);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    #faq h2::before {
+      content: "Frågor och svar";
+    }
+
+    #kontakt h2::before {
+      content: "Allmänna frågor och patientärenden";
+    }
+
+    #faq details {
+      overflow: hidden;
+      transition: box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    #faq details + details {
+      margin-top: 0.85rem !important;
+    }
+
+    #faq details:hover {
+      border-color: rgba(36, 95, 143, 0.24) !important;
+    }
+
+    #faq summary {
+      gap: 1rem;
+      padding-block: 0;
+      font-weight: 850 !important;
+    }
+
+    #faq summary span:last-child {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      height: auto;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      font-size: 0.9rem;
+    }
+
+    #faq details[open] {
+      box-shadow: var(--sleep-shadow) !important;
+      border-color: rgba(36, 95, 143, 0.26) !important;
+    }
+
+    #faq summary,
+    .treatment-detail summary {
+      color: var(--sleep-ink);
+    }
+
+    #kontakt {
+      width: 100% !important;
+      max-width: none !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-bottom: 6rem !important;
+      background: var(--sleep-surface);
+      border-top: 1px solid var(--sleep-line);
+      border-bottom: 1px solid var(--sleep-line);
+    }
+
+    #kontakt {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      width: 100% !important;
+      max-width: none !important;
+      gap: 1.5rem;
+      align-items: start;
+      margin-inline: 0 !important;
+    }
+
+    #kontakt > h2,
+    #kontakt > .contact-grid {
+      width: min(72rem, calc(100% - 3rem));
+      margin-inline: auto !important;
+    }
+
+    #kontakt > .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    #kontakt .contact-card {
+      width: 100% !important;
+      height: 100%;
+      max-width: none !important;
+      margin-top: 0 !important;
+      padding: 1.35rem !important;
+      background: var(--sleep-surface) !important;
+    }
+
+    #kontakt > h2 {
+      margin: 0;
+    }
+
+    #kontakt .contact-email-link {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      max-width: 100%;
+      border: 1px solid var(--sleep-line);
+      border-radius: var(--sleep-radius);
+      background: rgba(255, 255, 255, 0.86);
+      padding: 0.95rem 1.1rem;
+      color: var(--sleep-blue-dark) !important;
+      font-size: 1.1rem;
+      font-weight: 850;
+      box-shadow: 0 10px 24px rgba(20, 32, 51, 0.05);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .contact-list {
+      margin-top: 1rem;
+      display: grid;
+      gap: 0.45rem;
+      color: var(--sleep-muted);
+      font-size: 0.92rem;
+      font-weight: 650;
+      line-height: 1.45;
+    }
+
+    .contact-list li {
+      display: flex;
+      gap: 0.55rem;
+      align-items: flex-start;
+    }
+
+    .contact-list .list-icon {
+      display: inline-flex;
+      width: 1.15rem;
+      height: 1.15rem;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.1rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .contact-list-ok .list-icon {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .contact-list-no .list-icon {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    #kontakt > h2::after {
+      content: "Här hittar du rätt kontaktväg för allmänna frågor och patientärenden.";
+      display: block;
+      max-width: 46rem;
+      margin-top: 1.1rem;
+      color: var(--sleep-muted);
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 1.6;
+    }
+
+    #kontakt .tracking-\[0\.35em\] {
+      letter-spacing: 0.32em !important;
+    }
+
+    footer {
+      width: 100% !important;
+      max-width: none !important;
+      margin-inline: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-block: 2.2rem !important;
+      background: #e8f1f7;
+      border-top: 1px solid var(--sleep-line);
+      color: var(--sleep-muted) !important;
+    }
+
+    footer .flex-col {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 1rem !important;
+      padding-top: 0;
+    }
+
+    footer .text-lg {
+      font-size: 1rem !important;
+      font-weight: 850 !important;
+    }
+
+    footer button {
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    footer .uppercase {
+      letter-spacing: 0 !important;
+      text-transform: none !important;
+    }
+
+    [role="dialog"] > div {
+      border: 1px solid var(--sleep-line);
+      border-radius: var(--sleep-radius) !important;
+    }
+
+    @media (max-width: 767px) {
+      .hero-section {
+        min-height: auto;
+        padding-block: 2.2rem 2.5rem !important;
+      }
+
+      .hero-section h1::before {
+        margin-inline: auto;
+        text-align: center;
+      }
+
+      .hero-section .hero-inner {
+        width: min(100% - 1.75rem, 72rem);
+      }
+
+      .hero-section li {
+        width: 100%;
+      }
+
+      header .max-w-6xl,
+      main > section > .max-w-5xl,
+      #psykologer > h2,
+      #psykologer > p,
+      #psykologer > #psychologist-cards,
+      #kontakt > h2,
+      #kontakt > div,
+      footer > div {
+        width: min(100% - 1.75rem, 72rem);
+      }
+
+      #faq .faq-inner {
+        width: min(100% - 1.75rem, 58rem);
+      }
+
+      main > section:not(.hero-section) {
+        padding-block: 4rem !important;
+      }
+
+      header .text-2xl {
+        font-size: 1.25rem !important;
+      }
+
+      header img {
+        width: 2rem !important;
+        height: 2rem !important;
+      }
+
+      .fixed.top-0 {
+        font-size: 0.75rem !important;
+        line-height: 1.25;
+      }
+
+      .hero-section h1 {
+        letter-spacing: -0.03em;
+        line-height: 1.08;
+      }
+
+      .hero-section ul {
+        font-size: 1rem !important;
+      }
+
+      #varfor .why-grid > div {
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      #psychologist-cards > div {
+        text-align: center !important;
+        align-items: center !important;
+      }
+
+      #psychologist-cards h3,
+      #psychologist-cards p,
+      #psychologist-cards a {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      #psychologist-cards a {
+        align-self: center;
+      }
+
+      #kontakt {
+        display: block;
+        width: 100% !important;
+      }
+
+      #kontakt > .contact-grid {
+        display: block;
+        width: min(100% - 1.75rem, 72rem);
+        margin-inline: auto !important;
+      }
+
+      #kontakt .contact-card {
+        width: min(100% - 1.75rem, 72rem);
+        margin-top: 1.5rem !important;
+      }
+
+      footer .flex-col {
+        align-items: flex-start !important;
+        flex-direction: column !important;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .hero-section .hero-inner {
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 0.85fr) !important;
+      }
+    }
+  </style>
 </head>
 <body class="antialiased text-deep bg-foam">
   
@@ -73,7 +981,7 @@
 
   <main>
     <!-- Hero -->
-    <section class="relative overflow-hidden bg-foam pt-4 pb-4 md:pt-8 md:pb-16">
+    <section class="hero-section relative overflow-hidden bg-foam pt-4 pb-4 md:pt-8 md:pb-16">
       <img
         src="assets/hero-sky-clouds-generated-desktop-v4.png"
         alt=""
@@ -90,13 +998,13 @@
       />
       <div class="absolute inset-0 bg-gradient-to-b from-foam/70 via-foam/35 to-foam/5 md:hidden"></div>
       <div class="absolute inset-0 hidden bg-gradient-to-r from-foam/75 via-foam/35 to-transparent md:block"></div>
-      <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-6 md:grid-cols-2">
+      <div class="hero-inner relative mx-auto grid max-w-6xl items-center gap-10 px-6 md:grid-cols-[minmax(0,1.05fr)_minmax(430px,0.95fr)]">
       <div class="py-4 md:py-20">
-        <h1 class="text-3xl md:text-6xl font-extrabold leading-tight text-midnight">
+        <h1 class="text-center md:text-left text-3xl md:text-6xl font-extrabold leading-tight text-midnight">
           Missnöjd med sömnen?<br class="hidden md:block" />
           <span class="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 bg-clip-text text-transparent">Våra psykologer hjälper dig!<a href="#faq"></a></span>
         </h1>
-        <p class="mt-5 text-lg text-slate-600">
+        <div class="mt-5 text-lg text-slate-600">
           <ul class="mt-7 mb-7 text-lg text-slate-600 list-inside pl-5 space-y-2">
             <li>
               <strong>✓ Du ser resultat inom ett par veckor.</strong><sup><a href="#faq-effekt" aria-label="Läs mer om hur snabbt Sömn-KBT ger effekt" class="ml-0.5 text-midnight hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-sky/40 rounded-sm no-underline">1</a></sup>
@@ -106,7 +1014,7 @@
             </li>
             <li><strong>✓ Du får verktyg som fungerar livet ut.</strong></li>
           </ul>
-        </p>
+        </div>
         <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
           <a id="boka" href="#psykologer" class="rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">Boka videosamtal</a>
           <a href="#varfor" class="rounded-xl px-5 py-3 border">Varför Sömn-KBT?</a>
@@ -114,7 +1022,24 @@
         <p class="mt-3 text-xs text-slate-500"></p> <!-- Add any disclaimers here if needed -->
       </div>
       
-      <div class="hidden md:block" aria-hidden="true"></div>
+      <aside class="hero-psychologists hidden rounded-3xl border border-white/80 bg-white/75 p-5 shadow-soft backdrop-blur md:block" aria-label="William Matkaselkä och Johan Bornold">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <div class="aspect-square w-full overflow-hidden rounded-2xl bg-white shadow-soft">
+              <img src="assets/portrait-william.jpg" alt="William Matkaselkä" class="h-full w-full object-cover object-center scale-[1.18]" />
+            </div>
+            <p class="mt-3 font-semibold text-midnight">William Matkaselkä</p>
+            <p class="text-sm text-slate-600">Leg. psykolog</p>
+          </div>
+          <div>
+            <div class="aspect-square w-full overflow-hidden rounded-2xl bg-white shadow-soft">
+              <img src="assets/portrait-johan.JPG" alt="Johan Bornold" class="h-full w-full object-cover object-center scale-[2.65] translate-x-16 translate-y-32" />
+            </div>
+            <p class="mt-3 font-semibold text-midnight">Johan Bornold</p>
+            <p class="text-sm text-slate-600">Leg. psykolog</p>
+          </div>
+        </div>
+      </aside>
       </div>
        
     </section>
@@ -125,9 +1050,17 @@
       <div class="max-w-5xl mx-auto px-6 text-center">
         <h2 class="text-2xl md:text-3xl font-bold text-midnight">Våra psykologer kan hjälpa dig om</h2>
 
-        <div class="mt-7 md:mt-12 rounded-2xl border bg-foam px-5 shadow-soft text-center divide-y divide-slate-200 md:flex md:flex-wrap md:justify-center md:gap-6 md:divide-y-0 md:border-0 md:bg-transparent md:p-0 md:shadow-none md:text-left">
+        <div class="mt-7 md:mt-12 bg-transparent px-0 text-center divide-y divide-slate-200 md:flex md:flex-wrap md:justify-center md:gap-6 md:divide-y-0 md:text-left">
           <details class="treatment-detail group py-4 md:flex md:w-[calc(33.333%-1rem)] md:flex-col md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
             <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
+              <span class="problem-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M9 10h.01" />
+                  <path d="M15 10h.01" />
+                  <path d="M9 16c1.7-1.3 4.3-1.3 6 0" />
+                </svg>
+              </span>
               <span>Du har svårt att somna eller somna om</span>
               <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
             </summary>
@@ -136,6 +1069,17 @@
 
           <details class="treatment-detail group py-4 md:flex md:w-[calc(33.333%-1rem)] md:flex-col md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
             <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
+              <span class="problem-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18h6" />
+                  <path d="M10 22h4" />
+                  <path d="M8.5 14.5a6 6 0 1 1 7 0c-.9.7-1.5 1.5-1.5 2.5h-4c0-1-.6-1.8-1.5-2.5Z" />
+                  <path d="M4 8H2.5" />
+                  <path d="M21.5 8H20" />
+                  <path d="M5 4.5 4 3.5" />
+                  <path d="M19 4.5l1-1" />
+                </svg>
+              </span>
               <span>Du vaknar mycket under natten</span>
               <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
             </summary>
@@ -144,6 +1088,13 @@
 
           <details class="treatment-detail group py-4 md:flex md:w-[calc(33.333%-1rem)] md:flex-col md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
             <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
+              <span class="problem-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 6h5l-5 5h5" />
+                  <path d="M12 10h4l-4 4h4" />
+                  <path d="M7 16h6l-6 4h6" />
+                </svg>
+              </span>
               <span>Du sover överdrivet mycket</span>
               <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
             </summary>
@@ -152,6 +1103,12 @@
 
           <details class="treatment-detail group py-4 md:flex md:w-[calc(33.333%-1rem)] md:flex-col md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
             <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
+              <span class="problem-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M12 7v5l3 2" />
+                </svg>
+              </span>
               <span>Du är missnöjd med hur mycket du sover</span>
               <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
             </summary>
@@ -160,6 +1117,11 @@
 
           <details class="treatment-detail group py-4 md:flex md:w-[calc(33.333%-1rem)] md:flex-col md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
             <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
+              <span class="problem-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12c0-3.6 3.1-6 7-6s7 2.4 7 6-3.1 6-7 6h-1.5L7 20v-3c-1.3-1.1-2-2.8-2-5Z" />
+                </svg>
+              </span>
               <span>Din sömn störs av tankar</span>
               <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
             </summary>
@@ -168,6 +1130,11 @@
 
           <details class="treatment-detail group py-4 md:flex md:w-[calc(33.333%-1rem)] md:flex-col md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
             <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
+              <span class="problem-icon problem-icon-danger" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </svg>
+              </span>
               <span>Du har mardrömmar<sup><a href="#faq-mardrommar" aria-label="Läs mer om behandling av mardrömmar" class="ml-0.5 text-midnight hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-sky/40 rounded-sm no-underline">2</a></sup></span>
               <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
             </summary>
@@ -202,7 +1169,7 @@
         <!-- Johan -->
         <div id="psychologist-johan" class="p-6 rounded-2xl border bg-white shadow-soft flex flex-col items-center text-center">
           <div class="w-32 h-32 rounded-full overflow-hidden shadow-soft">
-            <img src="assets/portrait-johan.jpg" alt="Johan Bornold" class="w-full h-full object-cover object-center scale-[2.25] translate-x-7 translate-y-12" />
+            <img src="assets/portrait-johan.JPG" alt="Johan Bornold" class="w-full h-full object-cover object-center scale-[2.25] translate-x-[7.5rem] translate-y-56" />
           </div>
           <h3 class="mt-4 font-semibold text-lg">Johan Bornold</h3>
           <p class="text-slate-600">Leg. psykolog</p>
@@ -226,27 +1193,68 @@
           
         </p>
 
-        <div class="mt-12 grid md:grid-cols-3 gap-6 text-left">
-          <div class="p-6 rounded-2xl border bg-foam shadow-soft">
-            <h3 class="font-semibold text-lg text-midnight">Vi är legitimerade psykologer</h3>
+        <div class="why-grid mt-12 grid md:grid-cols-2 gap-6 text-left">
+          <div class="why-card-us p-6 rounded-2xl border bg-foam shadow-soft">
+            <h3 class="font-semibold text-lg text-midnight">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3 5 6v5c0 4.5 2.9 8.5 7 10 4.1-1.5 7-5.5 7-10V6l-7-3Z" />
+                  <path d="m9 12 2 2 4-5" />
+                </svg>
+              </span>
+              <span>Vi är legitimerade psykologer</span>
+            </h3>
             <p class="text-slate-600 mt-2">
               Psykolog är en <strong>skyddad titel</strong> vilket innebär att enbart personer som genomgått en psykologutbildning samt praktiskt psykologtjänstgöring får bära titeln. 
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl border bg-foam shadow-soft">
-            <h3 class="font-semibold text-lg text-midnight">Sömn-KBT har god evidens</h3>
+          <div class="why-card-evidence p-6 rounded-2xl border bg-foam shadow-soft">
+            <h3 class="font-semibold text-lg text-midnight">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 11v9" />
+                  <path d="M3 11h4v9H3z" />
+                  <path d="M7 12l4.3-7.4a2 2 0 0 1 3.7 1.1L14 10h4.4a2 2 0 0 1 2 2.3l-.9 5.5a3 3 0 0 1-3 2.5H7" />
+                </svg>
+              </span>
+              <span>Sömn-KBT har god evidens</span>
+            </h3>
             <p class="text-slate-600 mt-2">
               Sömn-KBT är <strong>väl beforskad</strong> och används internationellt som 
               en guldstandard vid behandling av sömnproblem. Till exempel rekommenderar Socialstyrelsen Sömn-KBT som förstahandsval vid sömnproblem.
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl border bg-foam shadow-soft">
-            <h3 class="font-semibold text-lg text-midnight">Sömn-KBT ger snabb effekt</h3>
+          <div class="why-card-effect p-6 rounded-2xl border bg-foam shadow-soft">
+            <h3 class="font-semibold text-lg text-midnight">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" />
+                </svg>
+              </span>
+              <span>Sömn-KBT ger snabb effekt</span>
+            </h3>
             <p class="text-slate-600 mt-2">
               Forskning visar att <strong>70–80&nbsp;%</strong> märker förbättring 
               inom ett par veckor. Effekten håller i sig långsiktigt för många, även flera år efter avslutad behandling.
+            </p>
+          </div>
+
+          <div class="why-card-availability p-6 rounded-2xl border bg-foam shadow-soft">
+            <h3 class="font-semibold text-lg text-midnight">
+              <span class="why-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="5" width="16" height="15" rx="2" />
+                  <path d="M8 3v4" />
+                  <path d="M16 3v4" />
+                  <path d="M4 10h16" />
+                </svg>
+              </span>
+              <span>Vi är tillgängliga kvällar och helger</span>
+            </h3>
+            <p class="text-slate-600 mt-2">
+              Du kan boka videosamtal på <strong>tider som passar vardagen</strong>, på kvällar eller helger, utan att behöva ta ledigt från jobbet för att till exempel åka till en vårdcentral eller mottagning.
             </p>
           </div>
         </div>
@@ -259,6 +1267,7 @@
 
     <!-- FAQ (expanded from your background docs) -->
     <section id="faq" class="max-w-6xl mx-auto px-6 py-12">
+      <div class="faq-inner">
       <h2 class="text-2xl font-bold text-midnight">Vanliga frågor</h2>
 
     <details class="mt-6 rounded-2xl border bg-white p-6 group open:shadow-soft">
@@ -356,33 +1365,58 @@
           <p>Behovet varierar beroende på person och sömnproblem. För vissa räcker det med en enda session för att se stora förbättringar, andra behöver mer. Det vanligaste är runt 3-4 sessioner.</p>
         </div>
       </details>
+      </div>
     </section>
 
 
     <!-- Contact -->
     <section id="kontakt" class="max-w-6xl mx-auto px-6 py-12">
-      <h2 class="text-2xl font-bold text-midnight">Kontakt</h2>
-      <div class="mt-6 rounded-2xl border bg-white p-6 shadow-soft">
-        <p class="text-slate-700">
-          <!-- E-mail: -->
-          <a href="mailto:info@somnpsykologerna.se" class="font-semibold text-midnight underline">info@somnpsykologerna.se</a>
-        </p>
-        <p class="mt-3 text-slate-700">
-          Det går att mejla oss med <strong>allmänna frågor</strong> om till exempel bokning eller hur behandling går till.
-        </p>
+      <h2 class="text-2xl font-bold text-midnight">Kontakta oss</h2>
+      <div class="contact-grid mt-6">
+      <div class="contact-card rounded-2xl border bg-white p-6 shadow-soft">
+        <p class="text-sm font-extrabold uppercase tracking-[0.14em] text-midnight">Allmänna frågor</p>
         <p class="mt-4 text-sm font-semibold leading-relaxed text-slate-700">
-          Men skicka inte personnummer, hälsouppgifter eller känslig information via e-post.<br>
-          För patientärenden använder vi säker inloggning med BankID via journalsystemet CTNotes.
+          Det går att mejla oss med allmänna frågor, men skicka inte personnummer, hälsouppgifter eller känslig information via e-post.
         </p>
-        <div class="mt-6 border-t border-slate-200 pt-4">
-          <p class="text-2xl tracking-[0.35em] text-slate-700" aria-label="CTNotes">
-            <span class="text-orange-500">C</span><span class="text-orange-500">T</span>Notes
-          </p>
-          <p class="mt-1 text-sm italic text-slate-700">
-            Vi använder journalsystemet CTNotes för hantering av dina uppgifter, läs mer på
-            <a href="https://ctnotes.com" class="underline" rel="noopener" target="_blank">ctnotes.com</a>
-          </p>
+        <ul class="contact-list contact-list-ok">
+          <li><span class="list-icon" aria-hidden="true">✓</span><span>Frågor om bokning</span></li>
+          <li><span class="list-icon" aria-hidden="true">✓</span><span>Frågor om priser</span></li>
+          <li><span class="list-icon" aria-hidden="true">✓</span><span>Frågor om hur behandlingen går till</span></li>
+        </ul>
+        <ul class="contact-list contact-list-no">
+          <li><span class="list-icon" aria-hidden="true">!</span><span>Skicka inte personnummer</span></li>
+          <li><span class="list-icon" aria-hidden="true">!</span><span>Skicka inte hälsouppgifter</span></li>
+          <li><span class="list-icon" aria-hidden="true">!</span><span>Skicka inte känslig information via e-post</span></li>
+        </ul>
+        <p class="mt-6">
+          <a href="mailto:info@somnpsykologerna.se" class="contact-email-link underline">info@somnpsykologerna.se</a>
+        </p>
+      </div>
+      <div class="contact-card rounded-2xl border bg-white p-6 shadow-soft">
+        <p class="text-sm font-extrabold uppercase tracking-[0.14em] text-midnight">Patientärenden</p>
+        <p class="mt-4 text-sm font-semibold leading-relaxed text-slate-700">
+          Du kan starta ditt patientärende genom att logga in med BankID i journalsystemen CTNotes (Johan) eller Kaddio (William). Du kommer till journalsystemet efter att du klickat på <strong><a href="#psykologer" class="underline">Boka Johan</a></strong> eller <strong><a href="#psykologer" class="underline">Boka William</a></strong>.
+          Använd journalsystemet om du behöver meddela oss hälsouppgifter, känslig information eller personuppgifter före eller efter bokning.
+        </p>
+        <ul class="contact-list contact-list-ok">
+          <li><span class="list-icon" aria-hidden="true">✓</span><span>Direktbokning och ombokning</span></li>
+          <li><span class="list-icon" aria-hidden="true">✓</span><span>Personliga uppgifter</span></li>
+          <li><span class="list-icon" aria-hidden="true">✓</span><span>Hälsouppgifter, till exempel sömnbesvär, diagnoser, läkemedel eller tidigare behandling</span></li>
+          <li><span class="list-icon" aria-hidden="true">✓</span><span>Känslig information som rör ditt patientärende</span></li>
+        </ul>
+        <div class="mt-6 grid grid-cols-2 items-end gap-4 border-t border-slate-200 pt-4">
+          <div>
+            <p class="text-2xl tracking-[0.35em] text-slate-700" aria-label="CTNotes">
+              <span class="text-orange-500">C</span><span class="text-orange-500">T</span>Notes
+            </p>
+          </div>
+          <div>
+            <p class="text-2xl font-semibold tracking-[0.12em] text-slate-700" aria-label="Kaddio">
+              <span class="text-sky-600">K</span>addio
+            </p>
+          </div>
         </div>
+      </div>
       </div>
     </section>
   </main>
@@ -394,11 +1428,11 @@
         <img src="assets/logo.svg" alt="" class="h-8 w-8" />
         <span class="text-lg font-bold">Sömnpsykologerna</span>
       </div>
+      <p>© <span id="y"></span> Sömnpsykologerna</p>
       <div class="flex flex-wrap gap-4 uppercase tracking-wide">
         <button type="button" class="underline hover:text-midnight" data-modal-open="privacy-modal">Integritetspolicy</button>
         <button type="button" class="underline hover:text-midnight" data-modal-open="terms-modal">Köpvillkor</button>
       </div>
-      <p>© <span id="y"></span> Sömnpsykologerna</p>
     </div>
   </footer>
 
@@ -410,7 +1444,7 @@
       </div>
       <div class="mt-5 space-y-4 text-sm leading-relaxed text-slate-700">
         <p>Sömnpsykologerna behandlar personuppgifter för att kunna besvara allmänna frågor, hantera bokningar och bedriva vård på ett säkert sätt.</p>
-        <p>Via e-post ska du inte skicka personnummer, hälsouppgifter eller känslig information. För patientärenden använder vi säker inloggning med BankID via journalsystemet CTNotes.</p>
+        <p>Via e-post ska du inte skicka personnummer, hälsouppgifter eller känslig information. Patientärenden startas och hanteras via säker inloggning med BankID i journalsystemen CTNotes (Johan) eller Kaddio (William).</p>
         <p>De uppgifter som kan behandlas är till exempel namn, kontaktuppgifter, bokningsinformation och de uppgifter som behövs för att administrera vår kontakt med dig.</p>
         <p>Du kan kontakta oss på <a href="mailto:info@somnpsykologerna.se" class="font-semibold text-midnight underline">info@somnpsykologerna.se</a> om du har frågor om hur dina personuppgifter behandlas.</p>
       </div>
@@ -425,7 +1459,7 @@
       </div>
       <div class="mt-5 space-y-4 text-sm leading-relaxed text-slate-700">
         <p>Villkor för bokning, betalning, ombokning och avbokning lämnas i samband med att en tid bokas.</p>
-        <p>Bokningar och patientärenden hanteras via säker inloggning med BankID i journalsystemet CTNotes.</p>
+        <p>Bokningar och patientärenden hanteras via säker inloggning med BankID i journalsystemen CTNotes (Johan) eller Kaddio (William).</p>
         <p>Om du behöver boka om eller avboka en tid följer du de instruktioner som lämnas i bokningsbekräftelsen eller kontaktar oss enligt de kontaktvägar som anges.</p>
         <p>Denna webbplats är under utveckling och inga tjänster erbjuds för tillfället. Fullständiga villkor publiceras innan tjänster börjar erbjudas via webbplatsen.</p>
       </div>
