@@ -966,6 +966,8 @@
 
     #kontakt .journal-logos {
       justify-items: center;
+      justify-content: center;
+      column-gap: 1rem;
       text-align: center;
     }
 
@@ -1055,6 +1057,33 @@
     }
 
     @media (max-width: 767px) {
+      .fixed.top-0 {
+        height: auto !important;
+        min-height: 2.75rem;
+        padding: 0.35rem 0.75rem !important;
+      }
+
+      .fixed.top-0 > div {
+        max-width: min(21rem, calc(100vw - 1.5rem));
+        border-radius: 0.75rem !important;
+        padding: 0.28rem 0.58rem !important;
+        font-size: 0.68rem !important;
+        line-height: 1.2;
+      }
+
+      body > .h-9 {
+        height: 2.75rem !important;
+      }
+
+      header {
+        top: 2.75rem !important;
+      }
+
+      header > div {
+        min-height: 60px;
+        gap: 0.75rem !important;
+      }
+
       .hero-section {
         min-height: auto;
         padding-block: 2.2rem 2.5rem !important;
@@ -1093,12 +1122,24 @@
       }
 
       header .text-2xl {
-        font-size: 1.25rem !important;
+        font-size: clamp(1.05rem, 5vw, 1.25rem) !important;
+        white-space: nowrap;
       }
 
       header img {
         width: 2rem !important;
         height: 2rem !important;
+      }
+
+      header > div > a:first-child {
+        min-width: 0;
+      }
+
+      header > div > a.bg-midnight {
+        flex: 0 0 auto;
+        padding: 0.55rem 0.78rem !important;
+        font-size: 0.88rem !important;
+        line-height: 1;
       }
 
       .fixed.top-0 {
@@ -1107,23 +1148,128 @@
       }
 
       .hero-section h1 {
+        font-size: clamp(1.45rem, 6.1vw, 1.85rem) !important;
         letter-spacing: -0.03em;
-        line-height: 1.08;
+        line-height: 1.05;
+        white-space: nowrap;
+      }
+
+      .hero-section h1::before {
+        width: fit-content;
+        max-width: 100%;
+        font-size: clamp(0.58rem, 2.35vw, 0.78rem);
+        letter-spacing: 0.07em;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      .hero-section h1 span {
+        display: block;
+        white-space: nowrap;
       }
 
       .hero-section ul {
         font-size: 1rem !important;
       }
 
+      .hero-section a.rounded-xl {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      #problem .divide-y {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+        text-align: left;
+        overflow: hidden;
+        border: 1px solid var(--sleep-line);
+        border-radius: var(--sleep-radius) !important;
+        background: var(--sleep-surface) !important;
+        box-shadow: 0 10px 28px rgba(20, 32, 51, 0.06) !important;
+      }
+
+      .treatment-detail {
+        width: 100%;
+        min-height: 0 !important;
+        padding: 0.95rem 1rem !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+
+      .treatment-detail + .treatment-detail {
+        border-top: 1px solid var(--sleep-line) !important;
+      }
+
+      .treatment-detail summary {
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: clamp(0.78rem, 3.15vw, 0.95rem);
+        line-height: 1.25;
+      }
+
+      .treatment-detail summary > span:nth-child(2) {
+        white-space: nowrap;
+      }
+
+      .treatment-detail p {
+        display: none !important;
+      }
+
+      .treatment-detail summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .treatment-detail summary::marker {
+        content: "";
+      }
+
+      .treatment-detail summary span:last-child {
+        display: none !important;
+      }
+
       #varfor .why-grid > div {
         grid-column: auto;
         grid-row: auto;
+        padding: 1.15rem !important;
+      }
+
+      #varfor .why-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+
+      #varfor .why-card-us,
+      #varfor .why-card-availability,
+      #varfor .why-card-evidence,
+      #varfor .why-card-effect {
+        grid-column: auto !important;
+        grid-row: auto !important;
+      }
+
+      #varfor h3 {
+        align-items: flex-start;
+        gap: 0.65rem;
+      }
+
+      .why-icon {
+        width: 2.1rem;
+        height: 2.1rem;
       }
 
       .about-section-grid {
         width: min(100% - 1.75rem, 72rem);
         grid-template-columns: 1fr;
         gap: 1.4rem;
+      }
+
+      #om-somnpsykologerna h2 {
+        font-size: 1.75rem !important;
+        line-height: 1.1;
       }
 
       .about-feature-grid {
@@ -1137,6 +1283,7 @@
       #psychologist-cards > div {
         text-align: center !important;
         align-items: center !important;
+        padding: 1.15rem !important;
       }
 
       #psychologist-cards h3,
@@ -1148,6 +1295,24 @@
 
       #psychologist-cards a {
         align-self: center;
+      }
+
+      #psychologist-cards > div > img,
+      #psychologist-cards > div > .w-32 {
+        width: 9rem !important;
+        height: 9rem !important;
+        aspect-ratio: 1 / 1;
+        border-radius: 999px !important;
+      }
+
+      #psychologist-cards > div > .w-32 img {
+        height: 100% !important;
+      }
+
+      .booking-consent,
+      .psychologist-facts {
+        width: 100%;
+        margin-inline: 0;
       }
 
       #kontakt {
@@ -1162,13 +1327,40 @@
       }
 
       #kontakt .contact-card {
-        width: min(100% - 1.75rem, 72rem);
+        width: 100% !important;
         margin-top: 1.5rem !important;
+        padding: 1.15rem !important;
+      }
+
+      #kontakt .contact-email-link {
+        width: 100%;
+        font-size: 0.98rem;
+        padding-inline: 0.8rem;
+        overflow-wrap: anywhere;
+      }
+
+      #faq details {
+        padding: 1.15rem !important;
+      }
+
+      #faq summary {
+        align-items: flex-start;
+        font-size: 0.98rem;
+        line-height: 1.35;
+      }
+
+      #faq summary span:last-child {
+        flex: 0 0 auto;
       }
 
       footer .flex-col {
-        align-items: flex-start !important;
+        align-items: center !important;
         flex-direction: column !important;
+        text-align: center;
+      }
+
+      footer .flex-wrap {
+        justify-content: center;
       }
     }
 
@@ -1206,7 +1398,7 @@
         <a href="#faq" class="hover:opacity-80">Vanliga frågor</a>
         <a href="#kontakt" class="hover:opacity-80">Kontakt</a>
       </nav>
-      <a href="#psykologer" class="md:inline-block hidden rounded-xl px-4 py-2 bg-midnight text-white shadow-soft">Boka videosamtal</a>
+      <a href="#psykologer" class="inline-block rounded-xl px-4 py-2 bg-midnight text-white shadow-soft"><span class="hidden md:inline">Boka videosamtal</span><span class="md:hidden">Boka</span></a>
     </div>
   </header>
 
@@ -1264,7 +1456,7 @@
           </div>
           <div>
             <div class="aspect-square w-full overflow-hidden rounded-2xl bg-white shadow-soft">
-              <img src="assets/portrait-johan.JPG" alt="Johan Bornold" class="h-full w-full object-cover object-center scale-[2.65] translate-x-16 translate-y-32" />
+              <img src="assets/portrait-johan-profile.jpg" alt="Johan Bornold" class="h-full w-full object-cover object-center scale-[2.65] translate-x-16 translate-y-32" />
             </div>
             <p class="mt-3 font-semibold text-midnight">Johan Bornold</p>
             <p class="text-sm text-slate-600">Leg. psykolog</p>
@@ -1377,7 +1569,7 @@
         <!-- Johan -->
         <div id="psychologist-johan" class="p-6 rounded-2xl border bg-white shadow-soft flex flex-col items-center text-center">
           <div class="w-32 h-32 rounded-full overflow-hidden shadow-soft">
-            <img src="assets/portrait-johan.JPG" alt="Johan Bornold" class="w-full h-full object-cover object-center scale-[2.25] translate-x-[7.5rem] translate-y-56" />
+            <img src="assets/portrait-johan-profile.jpg" alt="Johan Bornold" class="w-full h-full object-cover object-center scale-[2.25] translate-x-[7.5rem] translate-y-56" />
           </div>
           <h3 class="mt-4 font-semibold text-lg">Johan Bornold</h3>
           <p class="text-slate-600">Leg. psykolog</p>
@@ -1706,13 +1898,13 @@
         <p class="text-sm font-extrabold uppercase tracking-[0.14em] text-midnight">Patientärenden</p>
         <p class="mt-4 text-sm font-semibold leading-relaxed text-slate-700">
           Du kan starta ditt patientärende genom att logga in med BankID i journalsystemen CTNotes (Johan) eller Kaddio (William). Du kommer till journalsystemet efter att du klickat på <strong><a href="#psykologer" class="underline">Boka Johan</a></strong> eller <strong><a href="#psykologer" class="underline">Boka William</a></strong>.
-          Använd journalsystemet om du behöver meddela oss hälsouppgifter, känslig information eller personuppgifter före eller efter bokning.
+          Använd journalsystemet om du behöver meddela oss hälsouppgifter, information som rör ditt patientärende eller personuppgifter före eller efter bokning.
         </p>
         <ul class="contact-list contact-list-ok">
           <li><span class="list-icon" aria-hidden="true">✓</span><span>Direktbokning och ombokning</span></li>
           <li><span class="list-icon" aria-hidden="true">✓</span><span>Personliga uppgifter</span></li>
           <li><span class="list-icon" aria-hidden="true">✓</span><span>Hälsouppgifter, till exempel sömnbesvär, diagnoser eller tidigare behandling</span></li>
-          <li><span class="list-icon" aria-hidden="true">✓</span><span>Känslig information som rör ditt patientärende</span></li>
+          <li><span class="list-icon" aria-hidden="true">✓</span><span>Information som rör ditt patientärende</span></li>
         </ul>
         <div class="contact-card-footer">
           <div class="journal-logos grid grid-cols-2 items-end gap-4">
@@ -1784,7 +1976,7 @@
 
   function syncTreatmentDetails(event) {
     document.querySelectorAll(".treatment-detail").forEach((details) => {
-      details.open = event.matches;
+      details.open = true;
     });
   }
 
