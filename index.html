@@ -812,6 +812,242 @@
       line-height: 1.5;
     }
 
+    .consultation-band {
+      padding: 4.5rem 0 !important;
+      background: linear-gradient(135deg, var(--sleep-blue-dark), #245f8f) !important;
+      color: #ffffff;
+    }
+
+    .consultation-inner {
+      width: min(72rem, calc(100% - 3rem));
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .consultation-band .section-eyebrow {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .consultation-band h2 {
+      max-width: 48rem;
+      color: #ffffff !important;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.05;
+    }
+
+    .consultation-band p {
+      max-width: 49rem;
+      color: rgba(255, 255, 255, 0.84) !important;
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    .consultation-actions {
+      display: grid;
+      gap: 0.75rem;
+      min-width: 17rem;
+    }
+
+    .consultation-steps {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.35rem;
+    }
+
+    .consultation-step {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 0.85rem;
+      align-items: start;
+    }
+
+    .consultation-step-number,
+    .consultation-button-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .consultation-step-number {
+      width: 2rem;
+      height: 2rem;
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+    }
+
+    .consultation-button-number {
+      width: 1.45rem;
+      height: 1.45rem;
+      margin-right: 0.45rem;
+      background: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      font-size: 0.82rem;
+    }
+
+    .consultation-actions a:last-child .consultation-button-number {
+      background: rgba(23, 61, 102, 0.12);
+      color: var(--sleep-blue-dark);
+    }
+
+    .consultation-note {
+      margin-top: 1.4rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-weight: 600;
+    }
+
+    .consultation-note-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--sleep-blue-dark);
+      font-weight: 900;
+      line-height: 1;
+      box-shadow: 0 10px 22px rgba(20, 32, 51, 0.12);
+    }
+
+    .decision-popup {
+      position: fixed;
+      right: clamp(1rem, 3vw, 2rem);
+      bottom: clamp(1rem, 3vw, 2rem);
+      z-index: 60;
+      width: min(22rem, calc(100vw - 2rem));
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 1.45rem;
+      background: linear-gradient(135deg, var(--sleep-blue-dark), #245f8f);
+      color: #ffffff;
+      box-shadow: 0 24px 60px rgba(20, 32, 51, 0.24);
+      padding: 1.1rem;
+    }
+
+    .decision-popup[hidden] {
+      display: none;
+    }
+
+    .decision-popup-close {
+      position: absolute;
+      top: 0.65rem;
+      right: 0.65rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      font-size: 1.25rem;
+      line-height: 1;
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    .decision-popup-close:hover,
+    .decision-popup-close:focus-visible {
+      background: rgba(255, 255, 255, 0.2);
+      outline: none;
+      transform: translateY(-1px);
+    }
+
+    .decision-popup-eyebrow {
+      margin-right: 2.4rem;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .decision-popup-title {
+      margin-top: 0.35rem;
+      margin-right: 2.4rem;
+      color: #ffffff;
+      font-size: 1.25rem;
+      font-weight: 850;
+      line-height: 1.1;
+    }
+
+    .decision-popup-text {
+      margin-top: 0.45rem;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .decision-popup-actions {
+      display: grid;
+      gap: 0.55rem;
+      margin-top: 0.9rem;
+    }
+
+    .decision-popup-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      padding: 0.72rem 0.9rem;
+      font-weight: 800;
+      text-align: center;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .decision-popup-actions a:last-child {
+      border-color: #ffffff;
+      background: #ffffff;
+      color: var(--sleep-blue-dark);
+    }
+
+    .decision-popup-actions a:last-child .consultation-button-number {
+      background: rgba(23, 61, 102, 0.12);
+      color: var(--sleep-blue-dark);
+    }
+
+    .decision-popup-actions a:hover,
+    .decision-popup-actions a:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .consultation-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: var(--sleep-radius);
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.85rem 1.1rem;
+      color: #ffffff;
+      font-weight: 900;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .consultation-actions a:last-child {
+      border-color: #ffffff;
+      background: #ffffff;
+      color: var(--sleep-blue-dark);
+      box-shadow: 0 12px 26px rgba(20, 32, 51, 0.16);
+    }
+
+    .consultation-actions a:hover {
+      transform: translateY(-1px);
+    }
+
     #faq {
       width: 100% !important;
       padding-left: 0 !important;
@@ -1439,6 +1675,27 @@
         padding: 1rem;
       }
 
+      .consultation-band {
+        padding: 3.6rem 0 !important;
+      }
+
+      .consultation-inner {
+        width: min(100% - 1.75rem, 72rem);
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: left;
+      }
+
+      .consultation-band h2 {
+        font-size: 1.75rem;
+        line-height: 1.1;
+      }
+
+      .consultation-actions {
+        width: 100%;
+        min-width: 0;
+      }
+
       #psychologist-johan > .w-32 img {
         transform: translate(4.75rem, 8.95rem) scale(2.25) !important;
       }
@@ -1553,6 +1810,17 @@
       <a href="#kontakt">Kontakt</a>
     </nav>
   </header>
+
+  <aside id="decision-popup" class="decision-popup" aria-label="Snabbval" hidden>
+    <button id="decision-popup-close" class="decision-popup-close" type="button" aria-label="Stäng snabbval">×</button>
+    <p class="decision-popup-eyebrow">Kostnadsfri första kontakt</p>
+    <p class="decision-popup-title">Kan du inte bestämma dig?</p>
+    <p class="decision-popup-text">Har du en fråga eller vill du prata med oss innan du bokar?</p>
+    <div class="decision-popup-actions">
+      <a href="#gratis-konsultation"><span class="consultation-button-number" aria-hidden="true">1</span>Jag har en fråga</a>
+      <a href="#gratis-konsultation"><span class="consultation-button-number" aria-hidden="true">2</span>Boka en gratis konsultation</a>
+    </div>
+  </aside>
 
   <main>
     <!-- Hero -->
@@ -1704,7 +1972,7 @@
             <input id="book-william-confirm" type="checkbox" />
             <span>Jag är inte listad i Västra Götalandsregionen (VGR), visa mig boka-knappen.</span>
           </label>
-          <a href="https://WILLIAM-SIMPLYBOOK-LANK" 
+          <a id="book-william-link" href="https://WILLIAM-SIMPLYBOOK-LANK" 
             class="booking-link mt-4 inline-block rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
             Boka William
           </a>
@@ -1733,7 +2001,7 @@
             <input id="book-johan-confirm" type="checkbox" />
             <span>Jag är inte listad i Region Örebro län, visa mig boka-knappen.</span>
           </label>
-          <a href="https://JOHAN-SIMPLYBOOK-LANK" 
+          <a id="book-johan-link" href="https://JOHAN-SIMPLYBOOK-LANK" 
             class="booking-link mt-4 inline-block rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
             Boka Johan
           </a>
@@ -1749,6 +2017,37 @@
             <li><span class="fact-icon fact-info" aria-hidden="true">↗</span><span>Egen hemsida: <a href="https://johanbornold.se">Johan Bornold</a></span></li>
             <li><span class="fact-icon fact-no" aria-hidden="true">!</span><span>Tar inte emot patienter listade i Region Örebro län</span></li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="gratis-konsultation" class="consultation-band">
+      <div class="consultation-inner">
+        <div>
+          <p class="section-eyebrow">Kostnadsfri första kontakt</p>
+          <h2>Kan du inte bestämma dig?</h2>
+          <div class="consultation-steps">
+            <div class="consultation-step">
+              <span class="consultation-step-number" aria-hidden="true">1</span>
+              <p>
+                <strong>Har du en fråga?</strong> Se om du hittar din fråga bland <a href="#faq" class="font-semibold underline">Vanliga frågor</a>. Om du inte hittar ditt svar där kan du ställa en <a href="#kontakt" class="font-semibold underline">allmän fråga</a> eller starta ett <a href="#patientarenden" class="font-semibold underline">patientärende</a> om din fråga inkluderar privat information.
+              </p>
+            </div>
+            <div class="consultation-step">
+              <span class="consultation-step-number" aria-hidden="true">2</span>
+              <p>
+                <strong>Vill du prata med oss innan du bokar?</strong> Boka en gratis 15-minuters konsultation. Detta är inte en fullständig bedömning och inkluderar ingen behandling eller råd, utan är en första kort kontakt där vi kan svara på praktiska frågor och du får en chans att prata med oss innan du bokar ditt första samtal.
+              </p>
+            </div>
+          </div>
+          <p class="consultation-note">
+            <span class="consultation-note-icon" aria-hidden="true">!</span>
+            <span>För att boka en gratis konsultation behöver du <a href="#psychologist-william" class="font-semibold underline">Boka William</a> eller <a href="#psychologist-johan" class="font-semibold underline">Boka Johan</a>. Detta tar dig till ett journalsystem för säker inloggning med BankID. När du har loggat in kan du boka en gratis konsultation.</span>
+          </p>
+        </div>
+        <div class="consultation-actions" aria-label="Boka gratis konsultation">
+          <a href="#kontakt"><span class="consultation-button-number" aria-hidden="true">1</span>Jag har en fråga</a>
+          <a id="free-consultation-link" href="#psykologer"><span class="consultation-button-number" aria-hidden="true">2</span>Boka gratis konsultation</a>
         </div>
       </div>
     </section>
@@ -2061,7 +2360,7 @@
           </div>
         </div>
       </div>
-      <div class="contact-card rounded-2xl border bg-white p-6 shadow-soft">
+      <div id="patientarenden" class="contact-card scroll-mt-28 rounded-2xl border bg-white p-6 shadow-soft">
         <p class="text-sm font-extrabold uppercase tracking-[0.14em] text-midnight">Patientärenden</p>
         <p class="mt-4 text-sm font-semibold leading-relaxed text-slate-700">
           Du kan starta ditt patientärende genom att logga in med BankID i journalsystemen CTNotes (Johan) eller Kaddio (William). Du kommer till journalsystemet efter att du klickat på <strong><a href="#psykologer" class="underline">Boka Johan</a></strong> eller <strong><a href="#psykologer" class="underline">Boka William</a></strong>.
@@ -2143,6 +2442,9 @@
 
   const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
+  const decisionPopup = document.getElementById("decision-popup");
+  const decisionPopupClose = document.getElementById("decision-popup-close");
+  let decisionPopupDismissed = false;
 
   function setMobileMenuOpen(isOpen) {
     if (!mobileMenuToggle || !mobileMenu) return;
@@ -2168,6 +2470,22 @@
     if (mobileMenu.contains(event.target) || mobileMenuToggle.contains(event.target)) return;
     setMobileMenuOpen(false);
   });
+
+  function hideDecisionPopup() {
+    if (!decisionPopup) return;
+    decisionPopupDismissed = true;
+    decisionPopup.hidden = true;
+  }
+
+  decisionPopupClose?.addEventListener("click", hideDecisionPopup);
+  decisionPopup?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", hideDecisionPopup);
+  });
+
+  window.setTimeout(() => {
+    if (!decisionPopup || decisionPopupDismissed) return;
+    decisionPopup.hidden = false;
+  }, 20000);
 
   function syncTreatmentDetails(event) {
     document.querySelectorAll(".treatment-detail").forEach((details) => {
