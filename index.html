@@ -442,18 +442,15 @@
       border-radius: 999px;
       background: var(--sleep-blue-soft);
       color: var(--sleep-blue-dark);
+      font-size: 1rem;
+      font-weight: 900;
+      line-height: 1;
     }
 
-    .problem-icon svg {
-      width: 1.18rem;
-      height: 1.18rem;
-      stroke-width: 2.15;
-    }
-
-    .problem-icon-danger {
-      border-color: rgba(185, 74, 72, 0.22);
-      background: #fdeaea;
-      color: #b94a48;
+    #problem a[href="#faq-mardrommar"] {
+      position: relative;
+      z-index: 2;
+      pointer-events: auto;
     }
 
     .treatment-detail:hover {
@@ -518,6 +515,94 @@
 
     #psychologist-cards a {
       align-self: flex-start;
+    }
+
+    .psychologist-facts {
+      width: calc(100% - 0.7rem);
+      margin: 1.1rem 0.35rem 0;
+      display: grid;
+      gap: 0.45rem;
+      color: var(--sleep-muted);
+      font-size: 0.92rem;
+      font-weight: 650;
+      line-height: 1.45;
+      text-align: left;
+    }
+
+    .psychologist-facts li {
+      display: flex;
+      gap: 0.55rem;
+      align-items: flex-start;
+    }
+
+    .psychologist-facts .fact-icon {
+      display: inline-flex;
+      width: 1.15rem;
+      height: 1.15rem;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.1rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .psychologist-facts .fact-ok {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .psychologist-facts .fact-no {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .psychologist-facts .fact-info {
+      background: var(--sleep-blue-soft);
+      color: var(--sleep-blue-dark);
+    }
+
+    .psychologist-facts a {
+      margin: 0 !important;
+      align-self: auto !important;
+      color: var(--sleep-blue-dark);
+      font-weight: 850;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .booking-consent {
+      display: flex;
+      width: calc(100% - 0.7rem);
+      gap: 0.7rem;
+      align-items: flex-start;
+      margin: 1.1rem 0.35rem 0;
+      color: var(--sleep-ink);
+      font-size: 0.92rem;
+      font-weight: 800;
+      line-height: 1.45;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .booking-consent input {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin-top: 0.1rem;
+      accent-color: var(--sleep-blue);
+      flex: 0 0 auto;
+    }
+
+    #psychologist-cards a.booking-link {
+      align-self: center;
+      display: none !important;
+    }
+
+    #psychologist-cards a.booking-link.booking-link-visible,
+    .booking-consent:has(input:checked) + a.booking-link {
+      display: inline-flex !important;
     }
 
     #varfor .grid > div {
@@ -585,6 +670,75 @@
     #varfor .grid > div:hover {
       transform: translateY(-2px);
       border-top-color: rgba(36, 95, 143, 0.48) !important;
+    }
+
+    #om-somnpsykologerna {
+      background: linear-gradient(135deg, rgba(219, 234, 245, 0.72), rgba(251, 253, 255, 0.9)) !important;
+      border-top: 1px solid var(--sleep-line);
+      border-bottom: 1px solid var(--sleep-line);
+    }
+
+    .about-section-grid {
+      width: min(72rem, calc(100% - 3rem));
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(340px, 1.05fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-section-copy {
+      max-width: 38rem;
+    }
+
+    .section-eyebrow {
+      margin: 0 0 0.75rem;
+      color: var(--sleep-blue);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .about-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .about-feature-card {
+      min-height: 100%;
+      border: 1px solid var(--sleep-line);
+      border-radius: var(--sleep-radius);
+      background: rgba(255, 255, 255, 0.78);
+      padding: 1.15rem;
+      box-shadow: 0 12px 30px rgba(20, 32, 51, 0.06);
+    }
+
+    .about-feature-card span {
+      display: inline-flex;
+      width: 2rem;
+      height: 2rem;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.8rem;
+      border-radius: 999px;
+      background: var(--sleep-blue-soft);
+      color: var(--sleep-blue-dark);
+      font-weight: 900;
+    }
+
+    .about-feature-card h3 {
+      color: var(--sleep-ink);
+      font-size: 1rem;
+      font-weight: 850;
+    }
+
+    .about-feature-card p {
+      margin-top: 0.45rem;
+      color: var(--sleep-muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
     }
 
     #faq {
@@ -706,9 +860,12 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1.5rem;
+      align-items: stretch;
     }
 
     #kontakt .contact-card {
+      display: flex;
+      flex-direction: column;
       width: 100% !important;
       height: 100%;
       max-width: none !important;
@@ -776,6 +933,68 @@
     .contact-list-no .list-icon {
       background: #fee2e2;
       color: #991b1b;
+    }
+
+    .email-consent {
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+      margin-top: 1.15rem;
+      color: var(--sleep-ink);
+      font-size: 0.92rem;
+      font-weight: 800;
+      line-height: 1.45;
+      cursor: pointer;
+    }
+
+    .email-consent input {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin-top: 0.1rem;
+      accent-color: var(--sleep-blue);
+      flex: 0 0 auto;
+    }
+
+    .email-reveal {
+      display: none;
+      text-align: center;
+    }
+
+    .email-consent:has(input:checked) ~ .contact-card-footer .email-reveal {
+      display: block;
+    }
+
+    #kontakt .journal-logos {
+      justify-items: center;
+      text-align: center;
+    }
+
+    .contact-card-footer {
+      margin-top: auto;
+      min-height: 5.2rem;
+      padding-top: 1.15rem;
+    }
+
+    .contact-card-footer::before {
+      content: "";
+      display: block;
+      border-top: 1px solid var(--sleep-line);
+      margin-bottom: 1.15rem;
+    }
+
+    #kontakt .contact-email-link {
+      justify-content: center;
+      border-color: transparent;
+      background: var(--sleep-blue-dark);
+      color: #ffffff !important;
+      box-shadow: 0 12px 24px rgba(23, 61, 102, 0.18);
+      text-decoration: none;
+    }
+
+    #kontakt .contact-email-link:hover {
+      background: var(--sleep-blue) !important;
+      color: #ffffff !important;
+      transform: translateY(-1px);
     }
 
     #kontakt > h2::after {
@@ -901,6 +1120,20 @@
         grid-row: auto;
       }
 
+      .about-section-grid {
+        width: min(100% - 1.75rem, 72rem);
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+      }
+
+      .about-feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-feature-card {
+        padding: 1rem;
+      }
+
       #psychologist-cards > div {
         text-align: center !important;
         align-items: center !important;
@@ -949,21 +1182,19 @@
 <body class="antialiased text-deep bg-foam">
   
   <!-- Disclaimer Banner (fixed, consistent height) -->
-  <div class="fixed top-0 left-0 right-0 z-50 h-12
-              bg-yellow-50 border-b border-yellow-200
-              px-6 flex items-center justify-center text-center text-sm text-yellow-800">
-    ⚠️ <strong class="ml-1">Observera:</strong>
-    <span class="ml-2">
-      Denna webbplats är under utveckling. Inga tjänster erbjuds för tillfället.
-      Informationen på sidan är endast preliminär och ska inte betraktas som vårderbjudande eller medicinsk rådgivning.
-    </span>
+  <div class="fixed top-0 left-0 right-0 z-50 h-9 px-3 flex items-center justify-center text-center pointer-events-none">
+    <div class="rounded-full border border-yellow-200 bg-yellow-50 px-3 py-1 text-xs font-bold text-yellow-800 shadow-sm">
+      <span aria-hidden="true">⚠️</span>
+      <span class="ml-1">Observera:</span>
+      <span class="ml-1">Denna webbplats är under utveckling. Inga tjänster erbjuds för tillfället.</span>
+    </div>
   </div>
 
   <!-- Spacer for the fixed banner -->
-  <div class="h-12"></div>
+  <div class="h-9"></div>
 
   <!-- Header -->
-  <header class="sticky top-12 z-40 w-full bg-foam/90 backdrop-blur border-b border-slate-200/60">
+  <header class="sticky top-9 z-40 w-full bg-foam/90 backdrop-blur border-b border-slate-200/60">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="#" class="flex items-center gap-1">
         <img src="assets/logo.svg" alt="Sömnpsykologerna" class="h-10 w-10" />
@@ -1053,14 +1284,7 @@
         <div class="mt-7 md:mt-12 bg-transparent px-0 text-center divide-y divide-slate-200 md:flex md:flex-wrap md:justify-center md:gap-6 md:divide-y-0 md:text-left">
           <details class="treatment-detail group py-4 md:flex md:w-[calc(33.333%-1rem)] md:flex-col md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
             <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
-              <span class="problem-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="8" />
-                  <path d="M9 10h.01" />
-                  <path d="M15 10h.01" />
-                  <path d="M9 16c1.7-1.3 4.3-1.3 6 0" />
-                </svg>
-              </span>
+              <span class="problem-icon" aria-hidden="true">1</span>
               <span>Du har svårt att somna eller somna om</span>
               <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
             </summary>
@@ -1069,17 +1293,7 @@
 
           <details class="treatment-detail group py-4 md:flex md:w-[calc(33.333%-1rem)] md:flex-col md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
             <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
-              <span class="problem-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 18h6" />
-                  <path d="M10 22h4" />
-                  <path d="M8.5 14.5a6 6 0 1 1 7 0c-.9.7-1.5 1.5-1.5 2.5h-4c0-1-.6-1.8-1.5-2.5Z" />
-                  <path d="M4 8H2.5" />
-                  <path d="M21.5 8H20" />
-                  <path d="M5 4.5 4 3.5" />
-                  <path d="M19 4.5l1-1" />
-                </svg>
-              </span>
+              <span class="problem-icon" aria-hidden="true">2</span>
               <span>Du vaknar mycket under natten</span>
               <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
             </summary>
@@ -1088,13 +1302,7 @@
 
           <details class="treatment-detail group py-4 md:flex md:w-[calc(33.333%-1rem)] md:flex-col md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
             <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
-              <span class="problem-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M6 6h5l-5 5h5" />
-                  <path d="M12 10h4l-4 4h4" />
-                  <path d="M7 16h6l-6 4h6" />
-                </svg>
-              </span>
+              <span class="problem-icon" aria-hidden="true">3</span>
               <span>Du sover överdrivet mycket</span>
               <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
             </summary>
@@ -1103,12 +1311,7 @@
 
           <details class="treatment-detail group py-4 md:flex md:w-[calc(33.333%-1rem)] md:flex-col md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
             <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
-              <span class="problem-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="8" />
-                  <path d="M12 7v5l3 2" />
-                </svg>
-              </span>
+              <span class="problem-icon" aria-hidden="true">4</span>
               <span>Du är missnöjd med hur mycket du sover</span>
               <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
             </summary>
@@ -1117,11 +1320,7 @@
 
           <details class="treatment-detail group py-4 md:flex md:w-[calc(33.333%-1rem)] md:flex-col md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
             <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
-              <span class="problem-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12c0-3.6 3.1-6 7-6s7 2.4 7 6-3.1 6-7 6h-1.5L7 20v-3c-1.3-1.1-2-2.8-2-5Z" />
-                </svg>
-              </span>
+              <span class="problem-icon" aria-hidden="true">5</span>
               <span>Din sömn störs av tankar</span>
               <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
             </summary>
@@ -1130,12 +1329,8 @@
 
           <details class="treatment-detail group py-4 md:flex md:w-[calc(33.333%-1rem)] md:flex-col md:p-6 md:rounded-2xl md:border md:bg-foam md:shadow-soft">
             <summary class="cursor-pointer list-none font-semibold text-midnight flex items-center justify-center gap-2 md:pointer-events-none md:cursor-default md:justify-start md:text-lg">
-              <span class="problem-icon problem-icon-danger" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-                </svg>
-              </span>
-              <span>Du har mardrömmar<sup><a href="#faq-mardrommar" aria-label="Läs mer om behandling av mardrömmar" class="ml-0.5 text-midnight hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-sky/40 rounded-sm no-underline">2</a></sup></span>
+              <span class="problem-icon" aria-hidden="true">6</span>
+              <span>Du har mardrömmar<sup><a href="#faq-mardrommar" aria-label="Läs mer om behandling av mardrömmar" class="ml-0.5 text-midnight hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-sky/40 rounded-sm no-underline md:pointer-events-auto">2</a></sup></span>
               <span aria-hidden="true" class="text-slate-400 transition-transform group-open:rotate-180 md:hidden">⌄</span>
             </summary>
             <p class="mt-3 text-sm leading-relaxed text-slate-600 md:block md:mt-2 md:text-base">Du är missnöjd eftersom du ofta drömmer mardrömmar.</p>
@@ -1157,13 +1352,26 @@
           <img src="assets/portrait-william.jpg" alt="William Matkaselkä" class="w-32 h-32 rounded-full object-cover shadow-soft" />
           <h3 class="mt-4 font-semibold text-lg">William Matkaselkä</h3>
           <p class="text-slate-600">Leg. psykolog</p>
+          <label class="booking-consent" for="book-william-confirm">
+            <input id="book-william-confirm" type="checkbox" />
+            <span>Jag är inte listad i Västra Götalandsregionen (VGR), visa mig boka-knappen.</span>
+          </label>
           <a href="https://WILLIAM-SIMPLYBOOK-LANK" 
-            class="mt-6 inline-block rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
+            class="booking-link mt-4 inline-block rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
             Boka William
           </a>
           <p class="mt-4 text-slate-600 text-sm leading-relaxed">
-            Leg. psykolog med erfarenhet av kognitiv beteendeterapi (KBT) inom primärvården. Han har arbetat på fem vårdcentraler där han har behandlat sömnproblem och andra psykiska besvär. <strong>Endast för patienter som <u>inte</u> är listade i Västra Götalandsregionen (VGR).</strong>
+            Leg. psykolog med erfarenhet av kognitiv beteendeterapi (KBT) inom primärvården. Han har arbetat på fem vårdcentraler där han har behandlat sömnproblem och andra psykiska besvär.
           </p>
+          <ul class="psychologist-facts" aria-label="Information om William Matkaselkä">
+            <li><span class="fact-icon fact-ok" aria-hidden="true">✓</span><span>Tillgänglig kvällar och helger</span></li>
+            <li><span class="fact-icon fact-ok" aria-hidden="true">✓</span><span>Flerårig erfarenhet av Sömn-KBT</span></li>
+            <li><span class="fact-icon fact-ok" aria-hidden="true">✓</span><span>Videosamtal</span></li>
+            <li><span class="fact-icon fact-info" aria-hidden="true">i</span><span>Journalsystem: Kaddio</span></li>
+            <li><span class="fact-icon fact-info" aria-hidden="true">↗</span><span>Personlig hemsida: <a href="https://psykologwilliam.se">Psykolog William</a></span></li>
+            <li><span class="fact-icon fact-no" aria-hidden="true">!</span><span>Behandlar inte mardrömmar</span></li>
+            <li><span class="fact-icon fact-no" aria-hidden="true">!</span><span>Tar inte emot patienter listade i Västra Götalandsregionen (VGR)</span></li>
+          </ul>
         </div>
 
         <!-- Johan -->
@@ -1173,13 +1381,26 @@
           </div>
           <h3 class="mt-4 font-semibold text-lg">Johan Bornold</h3>
           <p class="text-slate-600">Leg. psykolog</p>
+          <label class="booking-consent" for="book-johan-confirm">
+            <input id="book-johan-confirm" type="checkbox" />
+            <span>Jag är inte listad i Region Örebro län, visa mig boka-knappen.</span>
+          </label>
           <a href="https://JOHAN-SIMPLYBOOK-LANK" 
-            class="mt-6 inline-block rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
+            class="booking-link mt-4 inline-block rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
             Boka Johan
           </a>
           <p class="mt-4 text-slate-600 text-sm leading-relaxed">
-            Leg. psykolog med särskilt fokus på sömn. Han har arbetat med Sömn-KBT i flera år. Utöver individuell terapi har han utvecklat behandlingsmanualer, utbildat personal och infört behandlingsmetoden på flera vårdcentraler i Sverige. Han brinner för att göra sömnbehandling mer tillgänglig och ser fram emot att träffa dig. <strong>Endast för patienter som <u>inte</u> är listade i region Örebro län.</strong>
+            Leg. psykolog med särskilt fokus på sömn. Han har arbetat med Sömn-KBT i flera år. Utöver individuell terapi har han utvecklat behandlingsmanualer, utbildat personal och infört behandlingsmetoden på flera vårdcentraler i Sverige. Han brinner för att göra sömnbehandling mer tillgänglig och ser fram emot att träffa dig.
           </p>
+          <ul class="psychologist-facts" aria-label="Information om Johan Bornold">
+            <li><span class="fact-icon fact-ok" aria-hidden="true">✓</span><span>Tillgänglig kvällar och helger</span></li>
+            <li><span class="fact-icon fact-ok" aria-hidden="true">✓</span><span>Flerårig erfarenhet av Sömn-KBT</span></li>
+            <li><span class="fact-icon fact-ok" aria-hidden="true">✓</span><span>Videosamtal</span></li>
+            <li><span class="fact-icon fact-ok" aria-hidden="true">✓</span><span>Behandlar mardrömmar</span></li>
+            <li><span class="fact-icon fact-info" aria-hidden="true">i</span><span>Journalsystem: CTNotes</span></li>
+            <li><span class="fact-icon fact-info" aria-hidden="true">↗</span><span>Personlig hemsida: <a href="https://johanbornold.se">Johan Bornold</a></span></li>
+            <li><span class="fact-icon fact-no" aria-hidden="true">!</span><span>Tar inte emot patienter listade i Region Örebro län</span></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -1265,6 +1486,48 @@
     </section>
 
 
+    <!-- Om Sömnpsykologerna -->
+    <section id="om-somnpsykologerna" class="py-16">
+      <div class="about-section-grid">
+        <div class="about-section-copy">
+          <p class="section-eyebrow">Om Sömnpsykologerna</p>
+          <h2 class="text-2xl md:text-3xl font-bold text-midnight">Sömnbehandling levererad av legitimerad psykolog via videosamtal</h2>
+          <p class="mt-5 text-slate-600 leading-relaxed">
+            Sömnpsykologerna är en privat digital mottagning för vuxna som vill få hjälp med sömnproblem. Vi erbjuder bedömning och Sömn-KBT via videosamtal med tillgänglighet på kvällar och helger.
+          </p>
+          <p class="mt-4 text-slate-600 leading-relaxed">
+            Behandlingen är kort (ett par veckor), strukturerad och praktisk. Tillsammans undersöker vi vad som gör att sömnproblemen kvarstår, har en tydlig plan mellan varje samtal och följer upp tills du har verktygen som tillåter dig att fortsätta själv.
+          </p>
+          <p class="mt-4 text-slate-600 leading-relaxed">
+            <strong>Psykologerna som driver Sömnpsykologerna har målet att göra Sömn-KBT mer lättillgängligt.</strong>
+          </p>
+        </div>
+        <div class="about-feature-grid">
+          <article class="about-feature-card">
+            <span aria-hidden="true">1</span>
+            <h3>Välj psykolog</h3>
+            <p>Du väljer Johan eller William och går vidare till respektive journalsystem.</p>
+          </article>
+          <article class="about-feature-card">
+            <span aria-hidden="true">2</span>
+            <h3>Boka tid</h3>
+            <p>Bokning och patientärenden hanteras med BankID via CTNotes eller Kaddio.</p>
+          </article>
+          <article class="about-feature-card">
+            <span aria-hidden="true">3</span>
+            <h3>Bedömningssamtal</h3>
+            <p>Första samtalet används för att förstå dina sömnproblem och rätt behandlingsupplägg.</p>
+          </article>
+          <article class="about-feature-card">
+            <span aria-hidden="true">4</span>
+            <h3>Aktiv behandling</h3>
+            <p>Efter bedömningen behandlar vi dina sömnproblem med Sömn-KBT.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
     <!-- FAQ (expanded from your background docs) -->
     <section id="faq" class="max-w-6xl mx-auto px-6 py-12">
       <div class="faq-inner">
@@ -1287,6 +1550,17 @@
         <p>Det måste också i sin tur leda till en negativ påverkan på individen och dess vardag. Diagnosen förklarar inte vad dessa sömnsvårigheter beror på och det kan finnas många förklaringar till varför. I Sverige uppfyller ungefär 10 % av den vuxna befolkningen diagnosen. Insomni kan ofta framgångsrikt behandlas med hjälp av sömn-KBT.</p>
       </div>
     </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Hur går det till?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Först väljer du den psykolog du vill boka hos genom att klicka på <strong><a href="#psykologer" class="underline">Boka Johan</a></strong> eller <strong><a href="#psykologer" class="underline">Boka William</a></strong>. Du kan ställa frågor via journalsystemet innan du bokar om du vill, eller direktboka en tid efter att du har loggat in.</p>
+          <p>Första samtalet är ett bedömningssamtal där psykologen bedömer dina sömnproblem och vilka insatser som är lämpliga. De följande samtalen är behandlingssamtal där vi gör upp planer för vad du testar mellan samtalen, följer upp hur det går och fortsätter tills du har de verktyg du behöver för att fortsätta själv eller känner dig tillfredsställd med resultatet. Vanligtvis krävs ungefär 3-4 samtal.</p>
+        </div>
+      </details>
 
       <details id="faq-effekt-details" class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
         <summary id="faq-effekt" class="scroll-mt-28 font-semibold cursor-pointer list-none flex items-center justify-between">
@@ -1346,6 +1620,36 @@
 
 
 
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Hur finansieras samtalen?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Sömnpsykologerna är en privat digital mottagning. Det innebär att du betalar för behandlingen själv.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Vad kostar det?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Du ser aktuella priser när du direktbokar via journalsystemet efter att du har klickat på <strong><a href="#psykologer" class="underline">Boka Johan</a></strong> eller <strong><a href="#psykologer" class="underline">Boka William</a></strong>. Vi har samma priser.</p>
+        </div>
+      </details>
+
+      <details class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
+        <summary class="font-semibold cursor-pointer list-none flex items-center justify-between">
+          Vilka tider finns tillgängliga?
+          <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
+        </summary>
+        <div class="mt-4 space-y-4 text-slate-700">
+          <p>Vi erbjuder tider på kvällar och helger. Exakta tider visas efter att du har valt <strong><a href="#psykologer" class="underline">Boka Johan</a></strong> eller <strong><a href="#psykologer" class="underline">Boka William</a></strong> och loggat in i journalsystemet.</p>
+        </div>
+      </details>
+
       <details id="faq-mardrommar-details" class="mt-4 rounded-2xl border bg-white p-6 group open:shadow-soft">
         <summary id="faq-mardrommar" class="scroll-mt-28 font-semibold cursor-pointer list-none flex items-center justify-between">
           <span><sup class="mr-1">2</sup>Kan ni behandla mardrömmar?</span>
@@ -1388,9 +1692,15 @@
           <li><span class="list-icon" aria-hidden="true">!</span><span>Skicka inte hälsouppgifter</span></li>
           <li><span class="list-icon" aria-hidden="true">!</span><span>Skicka inte känslig information via e-post</span></li>
         </ul>
-        <p class="mt-6">
-          <a href="mailto:info@somnpsykologerna.se" class="contact-email-link underline">info@somnpsykologerna.se</a>
-        </p>
+        <label class="email-consent" for="show-email">
+          <input id="show-email" type="checkbox" />
+          <span>Jag har läst och förstått, visa mig er e-postadress.</span>
+        </label>
+        <div class="contact-card-footer">
+          <div class="email-reveal">
+            <a href="mailto:info@somnpsykologerna.se" class="contact-email-link">info@somnpsykologerna.se</a>
+          </div>
+        </div>
       </div>
       <div class="contact-card rounded-2xl border bg-white p-6 shadow-soft">
         <p class="text-sm font-extrabold uppercase tracking-[0.14em] text-midnight">Patientärenden</p>
@@ -1401,19 +1711,21 @@
         <ul class="contact-list contact-list-ok">
           <li><span class="list-icon" aria-hidden="true">✓</span><span>Direktbokning och ombokning</span></li>
           <li><span class="list-icon" aria-hidden="true">✓</span><span>Personliga uppgifter</span></li>
-          <li><span class="list-icon" aria-hidden="true">✓</span><span>Hälsouppgifter, till exempel sömnbesvär, diagnoser, läkemedel eller tidigare behandling</span></li>
+          <li><span class="list-icon" aria-hidden="true">✓</span><span>Hälsouppgifter, till exempel sömnbesvär, diagnoser eller tidigare behandling</span></li>
           <li><span class="list-icon" aria-hidden="true">✓</span><span>Känslig information som rör ditt patientärende</span></li>
         </ul>
-        <div class="mt-6 grid grid-cols-2 items-end gap-4 border-t border-slate-200 pt-4">
-          <div>
-            <p class="text-2xl tracking-[0.35em] text-slate-700" aria-label="CTNotes">
-              <span class="text-orange-500">C</span><span class="text-orange-500">T</span>Notes
-            </p>
-          </div>
-          <div>
-            <p class="text-2xl font-semibold tracking-[0.12em] text-slate-700" aria-label="Kaddio">
-              <span class="text-sky-600">K</span>addio
-            </p>
+        <div class="contact-card-footer">
+          <div class="journal-logos grid grid-cols-2 items-end gap-4">
+            <div>
+              <p class="text-2xl tracking-[0.35em] text-slate-700" aria-label="CTNotes">
+                <span class="text-orange-500">C</span><span class="text-orange-500">T</span>Notes
+              </p>
+            </div>
+            <div>
+              <p class="text-2xl font-semibold tracking-[0.12em] text-slate-700" aria-label="Kaddio">
+                <span class="text-sky-600">K</span>addio
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -1494,6 +1806,18 @@
   desktopTreatments.addEventListener("change", syncPsychologistOrder);
   syncTreatmentDetails(desktopTreatments);
   syncPsychologistOrder(desktopTreatments);
+
+  document.querySelectorAll(".booking-consent input").forEach((input) => {
+    const bookingLink = input.closest(".booking-consent")?.nextElementSibling;
+    if (!bookingLink?.classList.contains("booking-link")) return;
+
+    function syncBookingLink() {
+      bookingLink.classList.toggle("booking-link-visible", input.checked);
+    }
+
+    input.addEventListener("change", syncBookingLink);
+    syncBookingLink();
+  });
 
   function openModal(modalId) {
     const modal = document.getElementById(modalId);
