@@ -217,6 +217,44 @@
       color: var(--sleep-blue) !important;
     }
 
+    .mobile-brand-row {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .mobile-menu-button {
+      display: none;
+      width: 2.1rem;
+      height: 2.1rem;
+      flex: 0 0 auto;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 0.65rem;
+      background: transparent;
+      color: var(--sleep-blue-dark);
+      box-shadow: none;
+    }
+
+    .mobile-menu-button span {
+      display: block;
+      width: 1.25rem;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+    }
+
+    .mobile-menu-button span + span {
+      margin-top: 0.24rem;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
     header > div > a:last-child {
       border: 1px solid var(--sleep-blue);
       background: transparent !important;
@@ -1138,6 +1176,66 @@
         gap: 0.75rem !important;
       }
 
+      .mobile-menu-button {
+        display: inline-flex;
+      }
+
+      .mobile-menu-button[aria-expanded="true"] {
+        background: rgba(219, 234, 245, 0.7);
+        color: var(--sleep-blue-dark);
+      }
+
+      .mobile-menu {
+        position: static;
+        width: 100%;
+        z-index: 50;
+        display: flex;
+        gap: 0;
+        align-items: stretch;
+        justify-content: space-evenly;
+        border-top: 1px solid var(--sleep-line);
+        border-bottom: 1px solid var(--sleep-line);
+        border-radius: 0;
+        background: rgba(243, 247, 250, 0.92);
+        padding: 0.15rem 0.875rem;
+        overflow: hidden;
+        box-shadow: 0 8px 18px rgba(20, 32, 51, 0.06);
+      }
+
+      .mobile-menu[hidden] {
+        display: none;
+      }
+
+      .mobile-menu a {
+        display: flex;
+        flex: 1 1 0;
+        min-height: 2.25rem;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 0.55rem;
+        background: transparent;
+        padding: 0.48rem 0.35rem;
+        color: var(--sleep-blue-dark);
+        font-size: 0.88rem;
+        font-weight: 850;
+        line-height: 1.25;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: none;
+      }
+
+      .mobile-menu a + a {
+        border-top: 0;
+      }
+
+      .mobile-menu a:hover,
+      .mobile-menu a:focus-visible {
+        background: rgba(251, 253, 255, 0.72);
+        color: var(--sleep-blue-dark) !important;
+        outline: none;
+      }
+
       .hero-section {
         min-height: auto;
         padding-block: 2.2rem 2.5rem !important;
@@ -1430,10 +1528,17 @@
   <!-- Header -->
   <header class="sticky top-9 z-40 w-full bg-foam/90 backdrop-blur border-b border-slate-200/60">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-1">
-        <img src="assets/logo.svg" alt="Sömnpsykologerna" class="h-10 w-10" />
-        <span class="text-2xl font-bold">Sömnpsykologerna</span>
-      </a>
+      <div class="mobile-brand-row">
+        <button id="mobile-menu-toggle" class="mobile-menu-button md:hidden" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Öppna meny">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+        <a href="#" class="flex items-center gap-1">
+          <img src="assets/logo.svg" alt="Sömnpsykologerna" class="h-10 w-10" />
+          <span class="text-2xl font-bold">Sömnpsykologerna</span>
+        </a>
+      </div>
       <nav class="hidden md:flex gap-6">
         <a href="#psykologer" class="hover:opacity-80">Våra psykologer</a>
         <!-- <a href="#priser" class="hover:opacity-80">Priser</a> -->
@@ -1442,6 +1547,11 @@
       </nav>
       <a href="#psykologer" class="inline-block rounded-xl px-4 py-2 bg-midnight text-white shadow-soft"><span class="hidden md:inline">Boka videosamtal</span><span class="md:hidden">Boka</span></a>
     </div>
+    <nav id="mobile-menu" class="mobile-menu md:hidden" hidden aria-label="Mobil meny">
+      <a href="#psykologer">Våra psykologer</a>
+      <a href="#faq">Vanliga frågor</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
   </header>
 
   <main>
@@ -2030,6 +2140,34 @@
 <script>
   const desktopTreatments = window.matchMedia("(min-width: 768px)");
   const johanFirstOnMobile = Math.random() < 0.5;
+
+  const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  function setMobileMenuOpen(isOpen) {
+    if (!mobileMenuToggle || !mobileMenu) return;
+    mobileMenu.hidden = !isOpen;
+    mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+    mobileMenuToggle.setAttribute("aria-label", isOpen ? "Stäng meny" : "Öppna meny");
+  }
+
+  mobileMenuToggle?.addEventListener("click", () => {
+    setMobileMenuOpen(mobileMenuToggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  mobileMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMobileMenuOpen(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMobileMenuOpen(false);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!mobileMenu || !mobileMenuToggle || mobileMenu.hidden) return;
+    if (mobileMenu.contains(event.target) || mobileMenuToggle.contains(event.target)) return;
+    setMobileMenuOpen(false);
+  });
 
   function syncTreatmentDetails(event) {
     document.querySelectorAll(".treatment-detail").forEach((details) => {
