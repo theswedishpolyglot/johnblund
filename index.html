@@ -1400,7 +1400,7 @@
       }
 
       header {
-        top: 2.75rem !important;
+        top: 0 !important;
       }
 
       header > div {
@@ -1766,20 +1766,8 @@
 </head>
 <body class="antialiased text-deep bg-foam">
   
-  <!-- Disclaimer Banner (fixed, consistent height) -->
-  <div class="fixed top-0 left-0 right-0 z-50 h-9 px-3 flex items-center justify-center text-center pointer-events-none">
-    <div class="rounded-full border border-yellow-200 bg-yellow-50 px-3 py-1 text-xs font-bold text-yellow-800 shadow-sm">
-      <span aria-hidden="true">⚠️</span>
-      <span class="ml-1">Observera:</span>
-      <span class="ml-1">Denna webbplats är under utveckling. Inga tjänster erbjuds för tillfället.</span>
-    </div>
-  </div>
-
-  <!-- Spacer for the fixed banner -->
-  <div class="h-9"></div>
-
   <!-- Header -->
-  <header class="sticky top-9 z-40 w-full bg-foam/90 backdrop-blur border-b border-slate-200/60">
+  <header class="sticky top-0 z-40 w-full bg-foam/90 backdrop-blur border-b border-slate-200/60">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
       <div class="mobile-brand-row">
         <a href="#" class="flex items-center gap-1">
@@ -1847,7 +1835,7 @@
           <ul class="mt-7 mb-7 text-lg text-slate-600 list-inside pl-5 space-y-2">
             <li>
               <a href="#faq-effekt" aria-label="Läs mer om hur snabbt Sömn-KBT ger effekt" class="caveat-link">
-                <strong>✓ Du ser resultat inom ett par veckor.</strong><sup>1</sup>
+                <strong>✓ Du ser resultatet inom ett par veckor.</strong><sup>1</sup>
               </a>
             </li>
             <li>
@@ -1968,7 +1956,7 @@
             <input id="book-william-confirm" type="checkbox" />
             <span>Jag är inte listad som patient på en vårdcentral i Västra Götalandsregionen (VGR), visa mig boka-knappen.</span>
           </label>
-          <a id="book-william-link" href="https://WILLIAM-SIMPLYBOOK-LANK" 
+          <a id="book-william-link" href="https://online.ctnotes.com/william-matkaselka" 
             class="booking-link mt-4 inline-block rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
             Boka William
           </a>
@@ -1996,7 +1984,7 @@
             <input id="book-johan-confirm" type="checkbox" />
             <span>Jag är inte listad som patient på en vårdcentral i Region Örebro län, visa mig boka-knappen.</span>
           </label>
-          <a id="book-johan-link" href="https://JOHAN-SIMPLYBOOK-LANK" 
+          <a id="book-johan-link" href="https://online.ctnotes.com/JohanBornold" 
             class="booking-link mt-4 inline-block rounded-xl px-5 py-3 bg-midnight text-white shadow-soft">
             Boka Johan
           </a>
@@ -2036,7 +2024,7 @@
           </div>
           <p class="consultation-note">
             <span class="consultation-note-icon" aria-hidden="true">!</span>
-            <span>För att boka en gratis konsultation behöver du <a href="#psychologist-william" class="font-semibold underline">Boka William</a> eller <a href="#psychologist-johan" class="font-semibold underline">Boka Johan</a>. Detta tar dig till ett journalsystem för säker inloggning med BankID. När du har loggat in kan du boka en gratis konsultation.</span>
+            <span>För att boka en gratis konsultation klickar du på <a href="#psychologist-william" class="font-semibold underline">Boka William</a> eller <a href="#psychologist-johan" class="font-semibold underline">Boka Johan</a>. I CTNotes väljer du tjänsten ”Gratis konsultation” för ett 15-minuters samtal. När du klickar på Boka fyller du i dina kontaktuppgifter och verifierar med BankID.</span>
           </p>
         </div>
         <div class="consultation-actions" aria-label="Boka gratis konsultation">
@@ -2152,7 +2140,7 @@
           <article class="about-feature-card">
             <span aria-hidden="true">2</span>
             <h3>Boka tid</h3>
-            <p>Bokning och patientärenden hanteras med BankID via CTNotes.</p>
+            <p>I CTNotes väljer du ”Psykoterapi” för Sömn-KBT eller ”Gratis konsultation” för ett 15-minuters samtal. Klicka på Boka, fyll i dina kontaktuppgifter och verifiera med BankID.</p>
           </article>
           <article class="about-feature-card">
             <span aria-hidden="true">3</span>
@@ -2198,7 +2186,7 @@
           <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
         </summary>
         <div class="mt-4 space-y-4 text-slate-700">
-          <p>Först väljer du den psykolog du vill boka hos genom att klicka på <strong><a href="#psykologer" class="underline">Boka Johan</a></strong> eller <strong><a href="#psykologer" class="underline">Boka William</a></strong>. Du kan ställa frågor via journalsystemet innan du bokar om du vill, eller direktboka en tid efter att du har loggat in.</p>
+          <p>Först väljer du den psykolog du vill boka hos genom att klicka på <strong><a href="#psykologer" class="underline">Boka Johan</a></strong> eller <strong><a href="#psykologer" class="underline">Boka William</a></strong>. I CTNotes väljer du tjänsten ”Psykoterapi” för Sömn-KBT eller ”Gratis konsultation” för en 15-minuters konsultation. När du klickar på Boka för den tjänst du valt fyller du i dina kontaktuppgifter och verifierar med BankID.</p>
           <p>Första samtalet är ett bedömningssamtal där psykologen bedömer dina sömnproblem och vilka insatser som är lämpliga. De följande samtalen är behandlingssamtal där vi gör upp planer för vad du testar mellan samtalen, följer upp hur det går och fortsätter tills du har de verktyg du behöver för att fortsätta själv eller känner dig tillfredsställd med resultatet. Vanligtvis krävs ungefär 3-4 samtal.</p>
         </div>
       </details>
@@ -2287,7 +2275,7 @@
           <span class="ml-4 text-slate-400 group-open:rotate-180 transition">⌄</span>
         </summary>
         <div class="mt-4 space-y-4 text-slate-700">
-          <p>Vi erbjuder tider på kvällar och helger. Exakta tider visas efter att du har valt <strong><a href="#psykologer" class="underline">Boka Johan</a></strong> eller <strong><a href="#psykologer" class="underline">Boka William</a></strong> och loggat in i journalsystemet.</p>
+          <p>Vi erbjuder tider på kvällar och helger. Du hittar tillgängliga tider i CTNotes via <strong><a href="#psykologer" class="underline">Boka Johan</a></strong> eller <strong><a href="#psykologer" class="underline">Boka William</a></strong>. Välj ”Psykoterapi” för Sömn-KBT eller ”Gratis konsultation” för en 15-minuters konsultation.</p>
         </div>
       </details>
 
@@ -2418,9 +2406,8 @@
       </div>
       <div class="mt-5 space-y-4 text-sm leading-relaxed text-slate-700">
         <p>Villkor för bokning, betalning, ombokning och avbokning lämnas i samband med att en tid bokas.</p>
-        <p>Bokningar och patientärenden hanteras via säker inloggning med BankID i journalsystemet CTNotes.</p>
+        <p>Bokningar hanteras via CTNotes. Du väljer tjänst, klickar på Boka, fyller i dina kontaktuppgifter och verifierar med BankID. För patientärenden använder du säker inloggning med BankID i CTNotes.</p>
         <p>Om du behöver boka om eller avboka en tid följer du de instruktioner som lämnas i bokningsbekräftelsen eller kontaktar oss enligt de kontaktvägar som anges.</p>
-        <p>Denna webbplats är under utveckling och inga tjänster erbjuds för tillfället. Fullständiga villkor publiceras innan tjänster börjar erbjudas via webbplatsen.</p>
       </div>
     </div>
   </div>
